@@ -16,4 +16,9 @@ class MainController extends Controller
     {
         return view('abone.iletisim');
     }
+
+    public function train1()
+    {
+        return view('abone.train1');
+    }
 }

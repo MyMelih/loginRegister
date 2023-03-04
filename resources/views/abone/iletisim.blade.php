@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+{{--
         <div class="card">
             <div class="form">
                 <div class="left-side">
@@ -17,10 +17,11 @@
                         <p class="step-number-content d-none">Add your profile piccture and let companies find youy fast.</p>
                     </div>
                     <ul class="progress-bar">
-                        <li class="active">Personal Information</li>
-                        <li>Education</li>
-                        <li>Work Experience</li>
-                        <li>User Photo</li>
+                        <li class="active">İletişim Bilgileri</li>
+                        <li>Adres Bilgileri</li>
+                        <li>Tercihler</li>
+                        <li>Ödeme</li>
+                        <li>Tamamlandı</li>
                     </ul>
 
 
@@ -214,15 +215,79 @@
                             <p>Thanks Mr./Mrs. <span class="shown_name"></span> your information have been submitted successfully for the future reference we will contact you soon.</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
+--}}
+
+    <div class="card">
+        <div class="form">
+            <div class="left-col">
+                <div class="left-side">
+                    <div class="left-side-img">
+                        <img class="form-card-img" src="{{ asset('img/LOGO.png') }}" alt="GIBIRNet Logo">
+                    </div>
+                    <div class="form-progress-bar">
+                        <ul class="text-center" id="progressbar">
+                            <li class="step0 active"></li>
+                            <li class="step0"></li>
+                            <li class="step0"></li>
+                            <li class="step0"></li>
+                            <li class="step0"></li>
+                        </ul>
+                        <h6 class="mb-5">İletişim Bilgileri</h6>
+                        <h6 class="mb-5">Adress Bilgileri</h6>
+                        <h6 class="mb-5">Tercihler Bilgileri</h6>
+                        <h6 class="mb-5">Ödeme</h6>
+                        <h6 class="mb-5">Tamamlandı</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="right-form">
+                    <div class="form-header">
+                        <p class="form-header-title">
+                            İletişim Bilgileri
+                        </p>
+                    </div>
+                    <div class="form-body">
+                        <form action="#">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Deneme</label>
+                                <input type="email" class="form-control" id="#" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">
+                                    We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="#">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="#">
+                                <label for="" class="form-check-label">Check Me Out</label>
+                            </div>
+                            <button type="submit" class="btn">Next</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="right-form"></div>
+                <div class="right-form"></div>
+                <div class="right-form"></div>
+                <div class="right-form"></div>
+            </div>
+        </div>
+    </div>
 
 
 @endsection
 
 @section('js')
-    <script>
+
+
+
+    {{-- <script>
         var next_click=document.querySelectorAll(".next_button");
         var main_form=document.querySelectorAll(".main");
         var step_list = document.querySelectorAll(".progress-bar li");
@@ -328,5 +393,5 @@
             return validate;
 
         }
-    </script>
+    </script> --}}
 @endsection

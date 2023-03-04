@@ -13,3 +13,5 @@ Route::get('/', function () {
 Route::get('/evde-internet-basvuru', [MainController::class, 'index'])->name('abone.index');
 
 Route::get('/evde-internet-basvuru/iletisim', [MainController::class, 'iletisim'])->name('abone.iletisim');
+
+Route::get('/train1', [MainController::class, 'train1'])->name('abone.train1');
