@@ -1,52 +1,103 @@
 @extends('layouts.app')
 
+@section('')
+<link rel="stylesheet" href=" {{asset('css/my.css')}} ">
+@endsection
+
 
 @section('content')
-    <form data-multi-step class="multi-step-form">
-        <div class="card1" data-step>
-            <h3 class="step-title">This is step 1</h3>
-            <div class="form-group">
-                <label for="mail">Email</label>
-                <input type="email" required name="mail" id="mail">
-            </div>
-            <div class="form-group">
-                <label for="password">Email</label>
-                <input type="password" name="password" id="email">
-            </div>
-            <button type="button" data-next >Next</button>
+
+    <form action="" class="form">
+        <h2 class="text-center">GıbırNet'e Hoş Geldiniz</h2>
+        <hr>
+
+        {{-- Progress Bar --}}
+        <div class="progressbar">
+            <div class="progress1" id="progress1"></div>
+
+            <div class="progress-step progress-step-active" data-title="Abone Türü"></div>
+            <div class="progress-step" data-title="Adress Bilgileri"></div>
+            <div class="progress-step" data-title="İnternet Paketleri"></div>
+            <div class="progress-step" data-title="Özet"></div>
+            <div class="progress-step" data-title="Tamamlandı"></div>
         </div>
-        <div class="card1" data-step>
-            <h3 class="step-title">This is step 2</h3>
-            <div class="form-group">
-                <label for="address">Address</label>
-                <input type="text" name="address" id="address">
+
+        {{-- Steps --}}
+        <div class="form-step form-step-active">
+            <div class="input-group">
+                <label for="username">username</label>
+                <input type="text" name="username" id="username" />
             </div>
-            <div class="form-group">
-                <label for="city">City</label>
-                <input type="text" name="city" id="city">
+            <div class="input-group">
+                <label for="position">Position</label>
+                <input type="text" name="position" id="position" />
             </div>
-            <div class="form-group">
-                <label for="zipcode">Zip Code</label>
-                <input type="text" name="zipcode" id="zipcode">
-            </div>
-            <div class="button-group">
-                <button type="button" data-previous >Previous</button>
-                <button type="button" data-next >Next</button>
+            <div class="">
+                <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
             </div>
         </div>
-        <div class="card1" data-step>
-            <h3 class="step-title">This is step 3</h3>
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" name="firstName" id="firstName">
+        <div class="form-step">
+            <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" />
             </div>
-            <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" name="lastName" id="lastName">
+            <div class="input-group">
+                <label for="email">Position</label>
+                <input type="text" name="email" id="email" />
             </div>
-            <div class="button-group">
-                <button type="button" data-previous >Previous</button>
-                <button type="submit">Submit</button>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Previous</a>
+                <a href="#" class="btn btn-next">Next</a>
+            </div>
+        </div>
+        <div class="form-step">
+            <div class="input-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="dob" id="dob" />
+            </div>
+            <div class="input-group">
+                <label for="ID">National ID</label>
+                <input type="number" name="ID" id="ID" />
+            </div>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Previous</a>
+                <a href="#" class="btn btn-next">Next</a>
+            </div>
+        </div>
+        <div class="form-step">
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" />
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                    type="password"
+                    name="confirmPassword"
+                    id="confirmPassword"
+                />
+            </div>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Previous</a>
+                <a href="#" class="btn btn-next">Next</a>
+            </div>
+        </div>
+        <div class="form-step">
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" />
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                    type="password"
+                    name="confirmPassword"
+                    id="confirmPassword"
+                />
+            </div>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Previous</a>
+                <input type="submit" value="Submit" class="btn">
             </div>
         </div>
     </form>
