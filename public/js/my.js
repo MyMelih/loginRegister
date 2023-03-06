@@ -1,3 +1,4 @@
+// ProgressBar
 const prevBtns = document.querySelectorAll(".btn-prev");
 const nextBtns = document.querySelectorAll(".btn-next");
 const progress = document.getElementById("progress1");
@@ -43,4 +44,46 @@ function updateProgressBar() {
     const progressActive = document.querySelectorAll(".progress-step-active");
 
     progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+}
+
+
+
+// Abone Sayfa Geçişleri
+$(document).ready(function () {
+    $("#bireysel").click(function () {
+        $(".abone-second-page").show();
+        $(".abone").hide();
+    });
+    $("#kurumsal").click(function () {
+        $(".abone-second-page").show();
+        $(".abone").hide();
+    });
+});
+
+$(document).ready(function () {
+    $("#abone-buton-prev").click(function () {
+        $(".abone").show();
+        $(".abone-second-page").hide();
+    });
+})
+
+// Abone Sayfası Form Yönlendirme Bölümleri
+
+var bireyselButon = document.getElementById("bireysel");
+var kurumsalButon = document.getElementById("kurumsal");
+
+bireyselButon.onclick = function () {
+    var bireyselForm = document.querySelector(".bireysel-page");
+    var firmaForm = document.querySelector(".firma-page");
+
+    bireyselForm.style.display = "block";
+    firmaForm.style.display = "none";
+}
+
+kurumsalButon.onclick = function () {
+    var bireyselForm = document.querySelector(".bireysel-page");
+    var firmaForm = document.querySelector(".firma-page");
+
+    bireyselForm.style.display = "none";
+    firmaForm.style.display = "block";
 }

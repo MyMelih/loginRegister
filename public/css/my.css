@@ -15,6 +15,8 @@ body {
     display: flex;
     place-items: center;
     min-height: 100vh;
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
 }
 
 
@@ -23,14 +25,37 @@ body {
 label {
     display: block;
     margin-bottom: 0.5rem;
+    padding-left: 0.85rem;
 }
 
 input {
     display: block;
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
+    padding: 0.5rem 0.25rem;
+    border: 1px solid var(--primary-color);
+    border-radius: .5rem !important;
+    margin-top: 0.30rem !important;
+}
+
+input::placeholder {
+    font-weight: 300;
+    padding-left: .75rem;
+
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none !important;
+    background-color: #fff !important;
+    border: 1px solid var(--primary-color) !important;
+}
+
+input[type="checkbox"]:checked:before {
+    content: "\2713";
+    width: 16px;
+    height: 16px;
+    display: block;
+    text-align: center;
+    color: var(--primary-color);
 }
 
 .width-50 {
@@ -64,20 +89,20 @@ input {
     transform: translateY(-50%);
     height: 4px;
     width: 100%;
-    background-color: #dcdcdc;
+    background-color: #767676;
     z-index: -1;
 }
 
 .progress1 {
     background-color: var(--primary-color);
     width: 0%;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .progress-step {
     width: 2.1875rem;
     height: 2.1875rem;
-    background-color: #dcdcdc;
+    background-color: #767676;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -103,18 +128,20 @@ input {
 }
 
 /* Form Stylings */
+
 .form {
-    width: 50%;
+    width: 45%;
     margin: 0 auto;
     border: 1px solid var(--primary-color);
-    border-radius: 0.35rem;
+    border-radius: 1.5rem;
     padding: 1.5rem;
+
 }
 
 .form-step {
     display: none;
     transform-origin: top;
-    animation: animate 0.5s;
+    animation: animate 0.75s;
 }
 
 @keyframes animate {
@@ -134,29 +161,85 @@ input {
 }
 
 .input-group {
-    margin: 2rem 0;
+    margin: .5rem 0;
 }
 
 
 /* Button Stylings */
 .btn {
-    padding: o.75rem;
+    padding: 0.25rem 3rem !important;
     display: block;
     text-decoration: none;
-    background-color: var(--primary-color);
-    color: #f3f3f3;
+    background-color: #FFFFFF;
+    color: var(--primary-color) !important;
+    text-align: center;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: 0.3s !important;
+    font-weight: 600 !important;
+    border: 1px solid var(--primary-color) !important;
+}
+
+/* .btn-click {
+    padding: 0.25rem 3rem !important;
+    display: block;
+    text-decoration: none;
+    background-color: var(--primary-color) !important;
+    color: #FFFFFF;
     text-align: center;
     border-radius: 0.25rem;
     cursor: pointer;
     transition: 0.3s;
-}
+    font-weight: 600 !important;
+    border: 1px solid var(--primary-color) !important;
+} */
+
+/* .btn:not(:disabled):not(.disabled).active {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+    border: 1px solid var(--primary-color) !important;
+} */
 
 .btn:hover {
-    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+    box-shadow: 0 0 0 2px #fff, 0 0 0 5px var(--primary-color);
+    background-color: #fff;
+    border: none !important;
 }
 
 .btns-group {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+}
+
+.abone-group-btn {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+.abone-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.abone-second-page {
+    display: none;
+}
+
+.birey {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.birey-checkbox {
+    width: 25px !important;
+    height: 25px !important;
+    border: 1px solid var(--primary-color);
+    margin: 0px;
+}
+
+.birey-checkbox-title {
+    margin: 5px 0;
 }
