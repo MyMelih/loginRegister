@@ -21,6 +21,9 @@ body {
 
 
 /* Global Stylings */
+hr {
+    border: 1px solid grey !important;
+}
 
 label {
     display: block;
@@ -31,7 +34,7 @@ label {
 input {
     display: block;
     width: 100%;
-    padding: 0.5rem 0.25rem;
+    padding: 0.25rem 1rem;
     border: 1px solid var(--primary-color);
     border-radius: .5rem !important;
     margin-top: 0.30rem !important;
@@ -39,14 +42,65 @@ input {
 
 input::placeholder {
     font-weight: 300;
-    padding-left: .75rem;
+}
 
+input[type="text"]:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+    padding: 8px;
+    transition: padding .4s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="text"]:focus:not(:valid) {
+    padding-right: 30px;
+    transition: padding .4 ease-in;
+}
+
+
+input[type="email"]:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+    padding: 8px;
+    transition: padding .4s ease-in;
+}
+
+input[type="email"]:focus:not(:valid) {
+    padding-right: 30px;
+}
+
+input[type="tel"]:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+    padding: 8px;
+    transition: padding .4s ease-in;
+}
+
+input[type="tel"]:focus:not(:valid) {
+    padding-right: 30px;
+}
+
+input[type="date"] {
+    color: #bcb8b8;
+}
+
+input[type="date"]:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+    padding: 8px;
+    transition: padding .4s ease-in;
+}
+
+input[type="date"]:focus:not(:valid) {
+    padding-top: 10px;
 }
 
 input[type="checkbox"] {
     -webkit-appearance: none !important;
     background-color: #fff !important;
     border: 1px solid var(--primary-color) !important;
+    display: flex;
+    justify-content: center;
 }
 
 input[type="checkbox"]:checked:before {
@@ -55,11 +109,8 @@ input[type="checkbox"]:checked:before {
     height: 16px;
     display: block;
     text-align: center;
+    justify-content: center;
     color: var(--primary-color);
-}
-
-.width-50 {
-    width: 50%;
 }
 
 .ml-auto {
@@ -134,7 +185,7 @@ input[type="checkbox"]:checked:before {
     margin: 0 auto;
     border: 1px solid var(--primary-color);
     border-radius: 1.5rem;
-    padding: 1.5rem;
+    padding: 3rem;
 
 }
 
@@ -164,6 +215,12 @@ input[type="checkbox"]:checked:before {
     margin: .5rem 0;
 }
 
+.step-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: black;
+}
 
 /* Button Stylings */
 .btn {
@@ -180,26 +237,6 @@ input[type="checkbox"]:checked:before {
     border: 1px solid var(--primary-color) !important;
 }
 
-/* .btn-click {
-    padding: 0.25rem 3rem !important;
-    display: block;
-    text-decoration: none;
-    background-color: var(--primary-color) !important;
-    color: #FFFFFF;
-    text-align: center;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: 0.3s;
-    font-weight: 600 !important;
-    border: 1px solid var(--primary-color) !important;
-} */
-
-/* .btn:not(:disabled):not(.disabled).active {
-    background-color: var(--primary-color) !important;
-    color: #fff !important;
-    border: 1px solid var(--primary-color) !important;
-} */
-
 .btn:hover {
     box-shadow: 0 0 0 2px #fff, 0 0 0 5px var(--primary-color);
     background-color: #fff;
@@ -210,17 +247,59 @@ input[type="checkbox"]:checked:before {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    justify-items: center;
 }
 
-.abone-group-btn {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+
+.abone {
+    transform-origin: top;
+    animation: animate 0.75s;
 }
+
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+
+
+/* Abone Pages */
+
+.bireysel-page {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
 
 .abone-group {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.abone-group-btn {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
 }
 
 .abone-second-page {
@@ -242,4 +321,121 @@ input[type="checkbox"]:checked:before {
 
 .birey-checkbox-title {
     margin: 5px 0;
+    font-weight: 600;
+}
+
+.birey-checkbox-title:hover {
+    font-weight: 500;
+}
+
+
+
+/* Firma Page */
+
+.firma-page {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+/* Tarife */
+.tarife {
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+
+.firma-gecis-page {
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+.yeni-kurulum-page {
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+.tarife-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tarife-group-btn {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding: 5px 0px !important;
+    width: 120px !important;
+}
+
+.tarife-btns {
+    display: contents;
+}
+
+.hizmet-no-bilgi {
+    color: #4A4A4A;
+    background: #FF3B3B26 0% 0% no-repeat padding-box;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.select-group {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+
+.gecis-select {
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    height: 40px;
+    width: 80%;
 }
