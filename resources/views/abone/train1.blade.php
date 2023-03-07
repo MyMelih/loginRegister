@@ -148,7 +148,7 @@
                     <a href="#" class="btn btn-prev" style="">Geri</a>
                 </div>
             </div>
-            <div class="tarife-group-pages">
+            <div class="tarife-group-pages mt-3">
                 <div class="firma-gecis-page">
                     <div class="row row-cols-2">
                         <div class="input-group col-12">
@@ -214,6 +214,62 @@
                     </div>
                 </div>
                 <div class="yeni-kurulum-page">
+                    <hr>
+                    <div class="row row-cols-2">
+                        <div class="select-group col-6">
+                            <label>Şehir</label>
+                            <select class ="gecis-select" name="sehir" id="sehir">
+                                <option ></option>
+                                <option value="">Ankara</option>
+                                <option value="">Konya</option>
+                            </select>
+                        </div>
+                        <div class="select-group col-6">
+                            <label>İlçe</label>
+                            <select class ="gecis-select" name="ilce" id="ilce">
+                                <option></option>
+                                <option value="">Mamak</option>
+                                <option value="">Kızılay</option>
+                            </select>
+                        </div>
+                        <div class="select-group col-6">
+                            <label>Mahalle</label>
+                            <select class ="gecis-select" name="mahalle" id="mahalle">
+                                <option></option>
+                                <option value="">Alaylar 1</option>
+                                <option value="">Alaylar 2</option>
+                                <option value="">Alaylar 3</option>
+                            </select>
+                        </div>
+                        <div class="select-group col-6">
+                            <label>Cadde/Sokak</label>
+                            <select class ="gecis-select" name="sokak" id="sokak">
+                                <option></option>
+                                <option value="">Mustafa Üstündag</option>
+                                <option value="">Eti Alüminyum</option>
+                            </select>
+                        </div>
+                        <div class="select-group col-6">
+                            <label>Dış Kapı No</label>
+                            <select class ="gecis-select" name="diskapino" id="diskapino">
+                                <option></option>
+                                <option value="">17</option>
+                                <option value="">57</option>
+                            </select>
+                        </div>
+                        <div class="select-group col-6">
+                            <label>İç Kapı No</label>
+                            <select class ="gecis-select" name="ickapino" id="ickapino">
+                                <option></option>
+                                <option value="">20</option>
+                                <option value="">4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btns-group mt-5">
+                        <a href="#" class="btn" id="gecis-buton-prev">Önceki</a>
+                        <a href="#" class="btn btn-next ">Sonraki</a>
+                    </div>
                 </div>
             </div>
         </div>
