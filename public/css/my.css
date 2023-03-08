@@ -1,5 +1,7 @@
 :root {
     --primary-color: #F29100;
+    --secondary-color: #4A4A4A;
+    --tertiary-color: #33AA22;
 
 }
 
@@ -13,7 +15,7 @@ body {
     font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     display: flex;
-    place-items: center;
+    /* place-items: center; */
     min-height: 100vh;
     /* background-color: #FFFFFF;
     background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%); */
@@ -23,6 +25,7 @@ body {
 /* Global Stylings */
 hr {
     border: 1px solid grey !important;
+    padding: 0 !important;
 }
 
 label {
@@ -186,7 +189,7 @@ input[type="checkbox"]:checked:before {
     border: 1px solid var(--primary-color);
     border-radius: 1.5rem;
     padding: 2rem 4rem;
-
+    height: min-content !important;
 }
 
 .form-step {
@@ -194,6 +197,50 @@ input[type="checkbox"]:checked:before {
     transform-origin: top;
     animation: animate 0.75s;
 }
+
+.abone {
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+.bireysel-page {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+.firma-page {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+.tarife {
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+.firma-gecis-page {
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+.yeni-kurulum-page {
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+.gecis-tarife-bilgilendirme {
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+.yeni-tarife-bilgilendirme {
+    transform-origin: top;
+    animation: animate 0.75s;
+}
+
+
 
 @keyframes animate {
     from {
@@ -207,6 +254,21 @@ input[type="checkbox"]:checked:before {
     }
 }
 
+@keyframes animate1 {
+    from {
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleY(1);
+        transform-origin: top;
+        opacity: 1;
+    }
+}
+
+
 .form-step-active {
     display: block;
 }
@@ -216,10 +278,13 @@ input[type="checkbox"]:checked:before {
 }
 
 .step-title {
-    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
     font-weight: 600;
     margin-bottom: 1.5rem;
     color: black;
+
 }
 
 /* Button Stylings */
@@ -251,46 +316,8 @@ input[type="checkbox"]:checked:before {
 }
 
 
-.abone {
-    transform-origin: top;
-    animation: animate 0.75s;
-}
-
-@keyframes animate {
-    from {
-        transform: scale(1, 0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1, 1);
-        opacity: 1;
-    }
-}
-
-
 
 /* Abone Pages */
-
-.bireysel-page {
-    display: none;
-    transform-origin: top;
-    animation: animate 0.75s;
-}
-
-@keyframes animate {
-    from {
-        transform: scale(1, 0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1, 1);
-        opacity: 1;
-    }
-}
-
-
 .abone-group {
     display: flex;
     align-items: center;
@@ -330,77 +357,11 @@ input[type="checkbox"]:checked:before {
 
 
 
-/* Firma Page */
-
-.firma-page {
-    display: none;
-    transform-origin: top;
-    animation: animate 0.75s;
-}
-
-@keyframes animate {
-    from {
-        transform: scale(1, 0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1, 1);
-        opacity: 1;
-    }
-}
 
 /* Tarife */
-.tarife {
-    transform-origin: top;
-    animation: animate 0.75s;
-}
-
-@keyframes animate {
-    from {
-        transform: scale(1, 0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1, 1);
-        opacity: 1;
-    }
-}
-
-
-.firma-gecis-page {
-    transform-origin: top;
-    animation: animate 0.75s;
-}
-
-@keyframes animate {
-    from {
-        transform: scale(1, 0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1, 1);
-        opacity: 1;
-    }
-}
-
-.yeni-kurulum-page {
-    transform-origin: top;
-    animation: animate 0.75s;
-}
-
-@keyframes animate {
-    from {
-        transform: scale(1, 0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1, 1);
-        opacity: 1;
-    }
+.tarife-label {
+    width: 80%;
+    margin: 3% 0;
 }
 
 .tarife-group {
@@ -429,6 +390,7 @@ input[type="checkbox"]:checked:before {
 
 .select-group {
     display: flex;
+    align-items: center;
     width: 80%;
     flex-direction: column;
 }
@@ -438,4 +400,188 @@ input[type="checkbox"]:checked:before {
     border-radius: 15px;
     height: 40px;
     width: 80%;
+}
+
+/* Bilgilendirme Sayfası */
+
+.gecis-tarife-bilgilendirme {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.yeni-tarife-bilgilendirme {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bilgilendirme-page {
+    width: 40% !important;
+    border: 3px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.sonuc-boxs {
+    border-bottom: 3px solid var(--primary-color);
+    width: 100%;
+}
+
+.hiz-sonuc {
+    color: #33AA22;
+    font-weight: 700;
+    font-size: xx-large;
+    margin: 3% 6%;
+    letter-spacing: 1px;
+}
+
+.sonuc-groups {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 2% 7%;
+}
+
+.sonuc-label {
+    padding: 0;
+    font-size: large;
+    font-weight: 600;
+}
+
+.sonuc-label1 {
+    padding: 0;
+    font-size: large;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Paketler Sayfası */
+
+.paketler {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.paket-int {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.paketler-block {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    width: 40%;
+    border: 4px solid var(--secondary-color);
+    border-radius: 25px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 1%;
+}
+
+.paketler-block.selected {
+    border: 4px solid var(--tertiary-color) !important;
+}
+
+.paketler-block1 {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    width: 40%;
+    border: 4px solid var(--secondary-color);
+    border-radius: 25px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 1%;
+}
+
+.paketler-block1.selected {
+    border: 4px solid var(--tertiary-color) !important;
+}
+
+.paketler-block2 {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    width: 40%;
+    border: 4px solid var(--secondary-color);
+    border-radius: 25px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 1%;
+}
+
+.paketler-block2.selected {
+    border: 4px solid var(--tertiary-color) !important;
+}
+
+.paketler-block3 {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    width: 40%;
+    border: 4px solid var(--secondary-color);
+    border-radius: 25px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 1%;
+}
+
+.paketler-block3.selected {
+    border: 4px solid var(--tertiary-color) !important;
+}
+
+.paket-block {
+    padding: 4%;
+}
+
+.paket-aciklama {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.icon-style {
+    display: block;
+    background-color: white;
+    color: var(--primary-color);
+    font-size: x-large;
+}
+
+.paket-hiz-title {
+    font-size: xx-large;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.paket-hiz-turu {
+    font-size: x-large;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.paket-hiz-ozellik {
+    font-size: large;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin: 0;
 }

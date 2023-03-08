@@ -7,7 +7,7 @@
 
 @section('content')
 
-    <form action="" class="form">
+    <form action="" class="form mt-5">
         <h2 class="text-center">GıbırNet'e Hoş Geldiniz</h2>
 
         {{-- Progress Bar --}}
@@ -37,6 +37,8 @@
             </div>
             <div class="abone-second-page">
                 <div class="bireysel-page">
+                    <h2 class="step-title">Bireysel Abonelik</h2>
+                    <hr>
                     <div class="row row-cols-2">
                         <div class="input-group col-6">
                             <label>Ad</label>
@@ -77,6 +79,8 @@
                     </div>
                 </div>
                 <div class="firma-page">
+                    <h2 class="step-title">Firma Abonelik</h2>
+                    <hr>
                     <div class="row row-cols-2">
                         <div class="input-group col-12">
                             <label>Firma Adı</label>
@@ -150,6 +154,8 @@
             </div>
             <div class="tarife-group-pages mt-3">
                 <div class="firma-gecis-page">
+                    <h2 class="step-title">Geçiş İşlemleri</h2>
+                    <hr>
                     <div class="row row-cols-2">
                         <div class="input-group col-12">
                             <label>Hizmet Numarası</label>
@@ -159,7 +165,7 @@
                             <p class="hizmet-no-bilgi">xDSL hizmet numarası <strong>18</strong> , <strong>88</strong> veya <strong>179</strong> ile başlayan 10 haneli bir numaradır. Farklı sayılarla başlayan numaralar geçiş işlemlerinde geçersiz sayılır ve başvuru işlemleri bu numaralar ile başlatılamaz. Eğer hizmet numaranızı bilmiyorsanız kullanmakta olduğunuz internet servis sağlayıcınızdan bu numarayı öğrenmeniz gerekir.</p>
                         </div>
                         <div class="select-group col-6">
-                            <label>Şehir</label>
+                            <label class="tarife-label">Şehir</label>
                             <select class ="gecis-select" name="sehir" id="sehir">
                                 <option ></option>
                                 <option value="">Ankara</option>
@@ -167,7 +173,7 @@
                             </select>
                         </div>
                         <div class="select-group col-6">
-                            <label>İlçe</label>
+                            <label class="tarife-label">İlçe</label>
                             <select class ="gecis-select" name="ilce" id="ilce">
                                 <option></option>
                                 <option value="">Mamak</option>
@@ -175,7 +181,7 @@
                             </select>
                         </div>
                         <div class="select-group col-6">
-                            <label>Mahalle</label>
+                            <label class="tarife-label">Mahalle</label>
                             <select class ="gecis-select" name="mahalle" id="mahalle">
                                 <option></option>
                                 <option value="">Alaylar 1</option>
@@ -184,7 +190,7 @@
                             </select>
                         </div>
                         <div class="select-group col-6">
-                            <label>Cadde/Sokak</label>
+                            <label class="tarife-label">Cadde/Sokak</label>
                             <select class ="gecis-select" name="sokak" id="sokak">
                                 <option></option>
                                 <option value="">Mustafa Üstündag</option>
@@ -192,7 +198,7 @@
                             </select>
                         </div>
                         <div class="select-group col-6">
-                            <label>Dış Kapı No</label>
+                            <label class="tarife-label">Dış Kapı No</label>
                             <select class ="gecis-select" name="diskapino" id="diskapino">
                                 <option></option>
                                 <option value="">17</option>
@@ -200,7 +206,7 @@
                             </select>
                         </div>
                         <div class="select-group col-6">
-                            <label>İç Kapı No</label>
+                            <label class="tarife-label">İç Kapı No</label>
                             <select class ="gecis-select" name="ickapino" id="ickapino">
                                 <option></option>
                                 <option value="">20</option>
@@ -210,14 +216,15 @@
                     </div>
                     <div class="btns-group mt-3">
                         <a href="#" class="btn" id="gecis-buton-prev">Önceki</a>
-                        <a href="#" class="btn btn-next ">Sonraki</a>
+                        <a href="#" class="btn" id="gecis-buton-next">Sonraki</a>
                     </div>
                 </div>
                 <div class="yeni-kurulum-page">
+                    <h2 class="step-title">Yeni Kurulum</h2>
                     <hr>
                     <div class="row row-cols-2">
                         <div class="select-group col-6">
-                            <label>Şehir</label>
+                            <label class="tarife-label">Şehir</label>
                             <select class ="gecis-select" name="sehir" id="sehir">
                                 <option ></option>
                                 <option value="">Ankara</option>
@@ -225,7 +232,7 @@
                             </select>
                         </div>
                         <div class="select-group col-6">
-                            <label>İlçe</label>
+                            <label class="tarife-label">İlçe</label>
                             <select class ="gecis-select" name="ilce" id="ilce">
                                 <option></option>
                                 <option value="">Mamak</option>
@@ -233,7 +240,7 @@
                             </select>
                         </div>
                         <div class="select-group col-6">
-                            <label>Mahalle</label>
+                            <label class="tarife-label">Mahalle</label>
                             <select class ="gecis-select" name="mahalle" id="mahalle">
                                 <option></option>
                                 <option value="">Alaylar 1</option>
@@ -242,7 +249,7 @@
                             </select>
                         </div>
                         <div class="select-group col-6">
-                            <label>Cadde/Sokak</label>
+                            <label class="tarife-label">Cadde/Sokak</label>
                             <select class ="gecis-select" name="sokak" id="sokak">
                                 <option></option>
                                 <option value="">Mustafa Üstündag</option>
@@ -250,7 +257,7 @@
                             </select>
                         </div>
                         <div class="select-group col-6">
-                            <label>Dış Kapı No</label>
+                            <label class="tarife-label">Dış Kapı No</label>
                             <select class ="gecis-select" name="diskapino" id="diskapino">
                                 <option></option>
                                 <option value="">17</option>
@@ -258,7 +265,7 @@
                             </select>
                         </div>
                         <div class="select-group col-6">
-                            <label>İç Kapı No</label>
+                            <label class="tarife-label">İç Kapı No</label>
                             <select class ="gecis-select" name="ickapino" id="ickapino">
                                 <option></option>
                                 <option value="">20</option>
@@ -266,25 +273,220 @@
                             </select>
                         </div>
                     </div>
-                    <div class="btns-group mt-5">
-                        <a href="#" class="btn" id="gecis-buton-prev">Önceki</a>
-                        <a href="#" class="btn btn-next ">Sonraki</a>
+                    <div class="btns-group mt-3">
+                        <a href="#" class="btn" id="yeni-buton-prev">Önceki</a>
+                        <a href="#" class="btn" id="yeni-buton-next">Sonraki</a>
+                    </div>
+                </div>
+                <div class="gecis-tarife-bilgilendirme mt-3 row">
+                    <h2 class="step-title col-12">İnternet Alt Yapı Sorgulama Sonucunuz</h2>
+                    <hr>
+                    <div class="bilgilendirme-page mt-3 mb-3">
+                        <div class="sonuc-boxs">
+                            <label class="hiz-sonuc">60 Mbps</label>
+                        </div>
+                        <div class="sonuc-groups">
+                            <label class="sonuc-label">BBK Kodu</label>
+                            <label class="sonuc-label">24681002</label>
+                        </div>
+                        <div class="sonuc-groups">
+                            <label class="sonuc-label">Boş Port</label>
+                            <label class="sonuc-label">VAR</label>
+                        </div>
+                        <div class="sonuc-groups">
+                            <label class="sonuc-label">Altyapı Türü</label>
+                            <label class="sonuc-label1">VDSL2</label>
+                        </div>
+                        <div class="sonuc-groups">
+                            <label class="sonuc-label">Santral Mesafe</label>
+                            <label class="sonuc-label">240 Metre</label>
+                        </div>
+
+                    </div>
+                    <div class="btns-group mt-3">
+                        <a href="#" class="btn" id="bilgi-gecis-buton-prev">Önceki</a>
+                        <a href="#" class="btn btn-next" id="bilgi-gecis-buton-next">Sonraki</a>
+                    </div>
+                </div>
+                <div class="yeni-tarife-bilgilendirme mt-3 row">
+                    <h2 class="step-title col-12">İnternet Alt Yapı Sorgulama Sonucunuz</h2>
+                    <hr>
+                    <div class="bilgilendirme-page mt-3 mb-3">
+                        <div class="sonuc-boxs">
+                            <label class="hiz-sonuc">60 Mbps</label>
+                        </div>
+                        <div class="sonuc-groups">
+                            <label class="sonuc-label">BBK Kodu</label>
+                            <label class="sonuc-label">24681002</label>
+                        </div>
+                        <div class="sonuc-groups">
+                            <label class="sonuc-label">Boş Port</label>
+                            <label class="sonuc-label">VAR</label>
+                        </div>
+                        <div class="sonuc-groups">
+                            <label class="sonuc-label">Altyapı Türü</label>
+                            <label class="sonuc-label1">VDSL2</label>
+                        </div>
+                        <div class="sonuc-groups">
+                            <label class="sonuc-label">Santral Mesafe</label>
+                            <label class="sonuc-label">240 Metre</label>
+                        </div>
+
+                    </div>
+                    <div class="btns-group mt-3">
+                        <a href="#" class="btn" id="bilgi-yeni-buton-prev">Önceki</a>
+                        <a href="#" class="btn btn-next" id="bilgi-yeni-buton-next">Sonraki</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="form-step">
-            <div class="input-group">
-                <label for="dob">Date of Birth</label>
-                <input type="date" name="dob" id="dob" />
-            </div>
-            <div class="input-group">
-                <label for="ID">National ID</label>
-                <input type="number" name="ID" id="ID" />
-            </div>
-            <div class="btns-group">
-                <a href="#" class="btn btn-prev">Previous</a>
-                <a href="#" class="btn btn-next">Next</a>
+            <h2 class="step-title">Paket Tipini Seçiniz</h2>
+            <hr>
+            <div class="paketler">
+                <div class="paket-int" id="paket1">
+                    <div class="paketler-block" id="paket1-1">
+                        <div class="paket-block">
+                            <label class="paket-hiz-title">35 Mbps</label>
+                            <label class="paket-hiz-turu">VDSL2</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">35 Mbps'e kadar indirme</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">12 Mbps'e kadar yükleme</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">Taahhütsüz</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">Kotasız</label>
+                        </div>
+                    </div>
+                    <div class="paketler-block" id="paket1-2">
+                        <div class="paket-block">
+                            <label class="paket-hiz-title">100 Mbps</label>
+                            <label class="paket-hiz-turu">VDSL2</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">100 Mbps'e kadar indirme</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">15 Mbps'e kadar yükleme</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">Taahhütsüz</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">Kotasız</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="paket-int" id="paket2">
+                    <div class="paketler-block1" id="paket2-1">
+                        <div class="paket-block">
+                            <label class="paket-hiz-title">35 Mbps</label>
+                            <label class="paket-hiz-turu">VDSL2</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">35 Mbps'e kadar indirme</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">12 Mbps'e kadar yükleme</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">Taahhütsüz</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">Kotasız</label>
+                        </div>
+                    </div>
+                    <div class="paketler-block1" id="paket2-2">
+                        <div class="paket-block">
+                            <label class="paket-hiz-title">35 Mbps</label>
+                            <label class="paket-hiz-turu">VDSL2</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">35 Mbps'e kadar indirme</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">12 Mbps'e kadar yükleme</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">Taahhütsüz</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">Kotasız</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="paket-int" id="paket3">
+                    <div class="paketler-block2">
+                        <div class="paket-block" id="paket3-1">
+                            <label class="paket-hiz-title">35 Mbps</label>
+                            <label class="paket-hiz-turu">VDSL2</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">35 Mbps'e kadar indirme</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">12 Mbps'e kadar yükleme</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">Taahhütsüz</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">Kotasız</label>
+                        </div>
+                    </div>
+                    <div class="paketler-block2">
+                        <div class="paket-block" id="paket3-2">
+                            <label class="paket-hiz-title">35 Mbps</label>
+                            <label class="paket-hiz-turu">VDSL2</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">35 Mbps'e kadar indirme</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">12 Mbps'e kadar yükleme</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">Taahhütsüz</label>
+                        </div>
+                        <div class="paket-aciklama">
+                            <i class="bi bi-check2-circle icon-style"></i>
+                            <label class="paket-hiz-ozellik">Kotasız</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="paket-int" id="paket4">
+                    <div class="paketler-block3" id="paket4-1"></div>
+                    <div class="paketler-block3" id="paket4-2"></div>
+                    <div class="paketler-block3" id="paket4-3"></div>
+                </div>
             </div>
         </div>
         <div class="form-step">
