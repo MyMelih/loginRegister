@@ -69,10 +69,8 @@ kurumsalButon.onclick = function () {
 }
 
 //Paket Seçme WaterFall Style
-var tarifeSecimGecis = document.getElementById("bilgi-gecis-buton-next");
-var tarifeSecimYeni = document.getElementById("bilgi-yeni-buton-next");
 
-tarifeSecimGecis.onclick = function () {
+function showPackage1() {
     var paket1 = document.querySelector("#paket1");
     var paket2 = document.querySelector("#paket2");
     var paket3 = document.querySelector("#paket3");
@@ -83,69 +81,42 @@ tarifeSecimGecis.onclick = function () {
     paket2.style.display = "none";
     paket3.style.display = "none";
     paket4.style.display = "none";
-    paket5.style.display = "none"
+    paket5.style.display = "none";
 }
 
-tarifeSecimYeni.onclick = function () {
-    var paket1 = document.querySelector("#paket1");
-    var paket2 = document.querySelector("#paket2");
-    var paket3 = document.querySelector("#paket3");
-    var paket4 = document.querySelector("#paket4");
-    var paket5 = document.querySelector("#paket5");
+document.getElementById("bilgi-gecis-buton-next").onclick = showPackage1;
+document.getElementById("bilgi-yeni-buton-next").onclick = showPackage1;
 
-    paket1.style.display = "flex";
-    paket2.style.display = "none";
-    paket3.style.display = "none";
-    paket4.style.display = "none";
-    paket5.style.display = "none"
+// Paket Seçme Bölümleri
+
+function showPackage(packageId) {
+    var package = document.querySelector(packageId);
+    package.style.display = "flex";
+    package.style.animation = "animate1 0.5s ease-in-out forwards";
 }
 
-var paket1_1 = document.getElementById("paket1-1");
-var paket1_2 = document.getElementById("paket1-2");
-var paket2_1 = document.getElementById("paket2-1");
-var paket2_2 = document.getElementById("paket2-2");
-var paket3_1 = document.getElementById("paket3-1");
-var paket3_2 = document.getElementById("paket3-2");
-
-
-paket1_1.onclick = function () {
-    var paket2 = document.querySelector("#paket2");
-    paket2.style.display = "flex";
-    paket2.style.animation = "animate1 0.5s ease-in-out forwards";
+document.getElementById("paket1-1").onclick = function () {
+    showPackage("#paket2");
 }
 
-paket1_2.onclick = function () {
-    var paket2 = document.querySelector("#paket2");
-    paket2.style.display = "flex";
-    paket2.style.animation = "animate1 0.5s ease-in-out forwards";
+document.getElementById("paket1-2").onclick = function () {
+    showPackage("#paket2");
 }
 
-
-paket2_1.onclick = function () {
-    var paket3 = document.querySelector("#paket3");
-    paket3.style.display = "flex";
-    paket3.style.animation = "animate1 0.5s ease-in-out forwards";
+document.getElementById("paket2-1").onclick = function () {
+    showPackage("#paket3");
 }
 
-
-
-paket2_2.onclick = function () {
-    var paket3 = document.querySelector("#paket3");
-    paket3.style.display = "flex";
-    paket3.style.animation = "animate1 0.5s ease-in-out forwards";
+document.getElementById("paket2-2").onclick = function () {
+    showPackage("#paket3");
 }
 
-
-paket3_1.onclick = function () {
-    var paket4 = document.querySelector("#paket4");
-    paket4.style.display = "flex";
-    paket4.style.animation = "animate1 0.5s ease-in-out forwards";
+document.getElementById("paket3-1").onclick = function () {
+    showPackage("#paket4");
 }
 
-paket3_2.onclick = function () {
-    var paket4 = document.querySelector("#paket4");
-    paket4.style.display = "flex";
-    paket4.style.animation = "animate1 0.5s ease-in-out forwards";
+document.getElementById("paket3-2").onclick = function () {
+    showPackage("#paket4");
 }
 
 
@@ -233,39 +204,6 @@ $(document).ready(function () {
 });
 
 // Paket Sayfası Aksiyonları
-// const paketlerBloks = document.querySelectorAll('.paketler-block');
-
-// paketlerBloks.forEach(block => {
-//     block.addEventListener('click', () => {
-//         paketlerBloks.forEach(b => b.classList.remove('selected'));
-//         block.classList.add('selected');
-//     });
-// });
-// const paketlerBloks1 = document.querySelectorAll('.paketler-block1');
-
-// paketlerBloks1.forEach(block => {
-//     block.addEventListener('click', () => {
-//         paketlerBloks1.forEach(b => b.classList.remove('selected'));
-//         block.classList.add('selected');
-//     });
-// });
-// const paketlerBloks2 = document.querySelectorAll('.paketler-block2');
-
-// paketlerBloks2.forEach(block => {
-//     block.addEventListener('click', () => {
-//         paketlerBloks2.forEach(b => b.classList.remove('selected'));
-//         block.classList.add('selected');
-//     });
-// });
-// const paketlerBloks3 = document.querySelectorAll('.paketler-block3');
-
-// paketlerBloks3.forEach(block => {
-//     block.addEventListener('click', () => {
-//         paketlerBloks3.forEach(b => b.classList.remove('selected'));
-//         block.classList.add('selected');
-//     });
-// });
-
 function addClickEventListeners(paketClass) {
     const paketlerBlocks = document.querySelectorAll(paketClass);
 
