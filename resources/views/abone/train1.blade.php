@@ -138,7 +138,7 @@
         </div>
         <div class="form-step">
             <div class="tarife mt-3">
-                <h2 class="step-title">Abonelk Başvuru Tipini Seçiniz</h2>
+                <h2 class="step-title">Abonelik Başvuru Tipini Seçiniz</h2>
                 <hr>
                 <div class="tarife-group mt-2">
                     <div class="tarife-btns">
@@ -344,7 +344,7 @@
             <h2 class="step-title">Paket Tipini Seçiniz</h2>
             <hr>
             <div class="paketler">
-                <div class="paket-int" id="paket1">
+                <div class="paket-int" id="paket1" onclick="toggleGroup(this)">
                     <div class="paketler-block" id="paket1-1">
                         <div class="paket-block">
                             <label class="paket-hiz-title">35 Mbps</label>
@@ -390,121 +390,114 @@
                         </div>
                     </div>
                 </div>
-                <div class="paket-int" id="paket2">
+                <div class="paket-int" id="paket2" onclick="toggleGroup(this)">
                     <div class="paketler-block1" id="paket2-1">
-                        <div class="paket-block">
-                            <label class="paket-hiz-title">35 Mbps</label>
-                            <label class="paket-hiz-turu">VDSL2</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">35 Mbps'e kadar indirme</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">12 Mbps'e kadar yükleme</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">Taahhütsüz</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">Kotasız</label>
+                        <div class="paket-block1">
+                            <h2>Modem İstemiyorum</h2>
                         </div>
                     </div>
                     <div class="paketler-block1" id="paket2-2">
-                        <div class="paket-block">
-                            <label class="paket-hiz-title">35 Mbps</label>
-                            <label class="paket-hiz-turu">VDSL2</label>
+                        <div class="model-left">
+                            <h4 class="model-isim">ZYXEL VMG1312-T20B</h4>
+                            <div class="model-list">
+                                500<sup class="model-list-fiyat-tur">,00 TL</sup>
+                            </div>
                         </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">35 Mbps'e kadar indirme</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">12 Mbps'e kadar yükleme</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">Taahhütsüz</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">Kotasız</label>
+                        <div class="model-right">
+                            <img src="{{ asset('img/zxyel-modem.png') }}" class="modem-resmi" alt="gibir_modem">
                         </div>
                     </div>
                 </div>
-                <div class="paket-int" id="paket3">
-                    <div class="paketler-block2">
-                        <div class="paket-block" id="paket3-1">
-                            <label class="paket-hiz-title">35 Mbps</label>
-                            <label class="paket-hiz-turu">VDSL2</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">35 Mbps'e kadar indirme</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">12 Mbps'e kadar yükleme</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">Taahhütsüz</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">Kotasız</label>
+                <div class="paket-int" id="paket3" onclick="toggleGroup(this)">
+                    <div class="paketler-block2" id="paket3-1">
+                        <div class="ip-yok">
+                            <h2>Sabit IP İstemiyorum</h2>
                         </div>
                     </div>
-                    <div class="paketler-block2">
-                        <div class="paket-block" id="paket3-2">
-                            <label class="paket-hiz-title">35 Mbps</label>
-                            <label class="paket-hiz-turu">VDSL2</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">35 Mbps'e kadar indirme</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">12 Mbps'e kadar yükleme</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">Taahhütsüz</label>
-                        </div>
-                        <div class="paket-aciklama">
-                            <i class="bi bi-check2-circle icon-style"></i>
-                            <label class="paket-hiz-ozellik">Kotasız</label>
+                    <div class="paketler-block2" id="paket3-2">
+                        <div class="ip-var">
+                            <h2>Sabit IP İstiyorum</h2>
+                            <div class="ip-fiyat">
+                                500<sup class="ip-fiyat-tur">,00 TL</sup>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="paket-int" id="paket4">
+                <div class="paket-int" id="paket4" onclick="toggleGroup(this)">
                     <div class="paketler-block3" id="paket4-1"></div>
                     <div class="paketler-block3" id="paket4-2"></div>
                     <div class="paketler-block3" id="paket4-3"></div>
                 </div>
+                <div class="btns-group mt-3" id="paket-btn-group">
+                    <a href="#" class="btn btn-prev">Önceki</a>
+                    <a href="#" class="btn btn-next">Sonraki</a>
+                </div>
             </div>
         </div>
         <div class="form-step">
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" />
-            </div>
-            <div class="input-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input
-                    type="password"
-                    name="confirmPassword"
-                    id="confirmPassword"
-                />
+            <div>
+                <div>
+                    <div>
+                        <h5>Abone Bilgileriniz</h5>
+                    </div>
+                    <hr>
+                    <div class="abone-bilgi-list">
+                        <label class="abone-bilgi">Abdurrahman</label>
+                        <label class="abone-bilgi">Yanbakanoğulları</label>
+                        <label class="abone-bilgi">12345678902</label>
+                        <label class="abone-bilgi">(530) 123 45 67</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="">
+                        <label>Abdres Bilginiz</label>
+                        <button>Adress Düzenle <i class="bi bi-pencil-square"></i></button>
+                    </div>
+                    <div class="">
+                        <label>Şeker Mahallesi, Kerbela Sokak, No: 2 / 803, Selçuklu / KONYA</label>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label>Tercihleriniz</label>
+                        <button>Tercih Düzenle</button>
+                    </div>
+                    <div>
+                        <div>
+                            <ul>
+                                <li>Yeni Kurulum</li>
+                                <li>35 Mbps'e kadar indirme</li>
+                                <li>12 Mbps'e kadar yükleme</li>
+                                <li>Taahütsüz</li>
+                                <li>Kotasız</li>
+                                <li>Modem İstemiyorum</li>
+                                <li>Sabit Ip İstemiyorum</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div>
+                                <label>Yeni Kurulum(300,00 TL/6 Ay)</label>
+                                <label>50,00 TL</label>
+                            </div>
+                            <div>
+                                <label>35 Mbps VDSL (Aylık)</label>
+                                <label>100,00 TL</label>
+                            </div>
+                            <hr>
+                            <div>
+                                <label>Toplam Tutar</label>
+                                <label>150,00 TL</label>
+                            </div>
+                            <button>
+                                Onayla
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="btns-group">
-                <a href="#" class="btn btn-prev">Previous</a>
-                <a href="#" class="btn btn-next">Next</a>
+                <a href="#" class="btn btn-prev">Önceki</a>
+                <a href="#" class="btn btn-next">Sonraki</a>
             </div>
         </div>
         <div class="form-step">

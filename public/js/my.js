@@ -75,13 +75,15 @@ function showPackage1() {
     var paket2 = document.querySelector("#paket2");
     var paket3 = document.querySelector("#paket3");
     var paket4 = document.querySelector("#paket4");
-    var paket5 = document.querySelector("#paket5");
+    var paketBtn = document.querySelector("#paket-btn-group");
+
 
     paket1.style.display = "flex";
     paket2.style.display = "none";
     paket3.style.display = "none";
     paket4.style.display = "none";
-    paket5.style.display = "none";
+    paketBtn.style.display = "none";
+
 }
 
 document.getElementById("bilgi-gecis-buton-next").onclick = showPackage1;
@@ -118,6 +120,19 @@ document.getElementById("paket3-1").onclick = function () {
 document.getElementById("paket3-2").onclick = function () {
     showPackage("#paket4");
 }
+
+document.getElementById("paket4-1").onclick = function () {
+    showPackage("#paket-btn-group");
+}
+
+document.getElementById("paket4-2").onclick = function () {
+    showPackage("#paket-btn-group");
+}
+
+document.getElementById("paket4-3").onclick = function () {
+    showPackage("#paket-btn-group");
+}
+
 
 
 
@@ -220,4 +235,13 @@ addClickEventListeners('.paketler-block1');
 addClickEventListeners('.paketler-block2');
 addClickEventListeners('.paketler-block3');
 
-// Paket Sayfasında Şelale Mantığında Seçim Yapma
+// Waterfall açılır menu odaklama vs..
+
+function toggleGroup() {
+    var totalHeight = 0;
+    var groups = document.getElementsByClassName("paket-int");
+    for (var i = 0; i < groups.length; i++) {
+        totalHeight += groups[i].offsetHeight;
+    }
+    window.scrollTo(0, totalHeight);
+}
