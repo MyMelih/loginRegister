@@ -464,7 +464,7 @@
                 </div>
                 <div>
                     <div class="ozet-adress">
-                        <h5>Abdres Bilginiz</h5>
+                        <h5>Adres Bilginiz</h5>
                         <button class="ozet-adress-btn" >Adress Düzenle <i class="bi bi-pencil-square"></i></button>
                     </div>
                     <hr>
