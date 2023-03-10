@@ -46,15 +46,15 @@
                         </div>
                         <div class="input-group col-6">
                             <label>Soyad</label>
-                            <input type="text" name="soyad" id="soyad" placeholder="Soyad"required/>
+                            <input type="text" name="soyad" id="soyad" placeholder="Soyad" required/>
                         </div>
                         <div class="input-group col-6">
                             <label>E-Posta</label>
-                            <input type="email" name="mail" id="mail" placeholder="gibirnet@gmail.com"required/>
+                            <input type="email" name="mail" id="mail" placeholder="gibirnet@gmail.com" required/>
                         </div>
                         <div class="input-group col-6">
                             <label>Telefon</label>
-                            <input type="tel" name="telefon" id="telefon" placeholder="+90 5*** *** ****"required/>
+                            <input type="tel" name="telefon" id="telefon" placeholder="+90 5*** *** ****" required/>
                         </div>
                         <div class="input-group col-6">
                             <label>TC Kimlik No</label>
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                     <div class="birey mt-5">
-                        <input type="checkbox" id="bireyCheckbox" class="birey-checkbox">
+                        <input type="checkbox" id="bireyCheckbox" class="birey-checkbox" required>
                         <label for="bireyCheckbox" class="birey-checkbox-title ">Kişisel verilerimin işlenmesini izin veriyorum.</label>
                     </div>
                     <div class="birey-footer mt-2">
@@ -84,45 +84,45 @@
                     <div class="row row-cols-2">
                         <div class="input-group col-12">
                             <label>Firma Adı</label>
-                            <input type="text" name="firmaAdi" id="firmaAdi" placeholder="Firma Adı" />
+                            <input type="text" name="firmaAdi" id="firmaAdi" placeholder="Firma Adı" required/>
                         </div>
                         <div class="input-group col-6">
                             <label>Vergi Dairesi</label>
-                            <input type="text" name="vergiDaire" id="vergiDaire" placeholder="Vergi Dairesi"/>
+                            <input type="text" name="vergiDaire" id="vergiDaire" placeholder="Vergi Dairesi" required/>
                         </div>
                         <div class="input-group col-6">
                             <label>Vergi No</label>
-                            <input type="text" name="vergiNo" id="vergiNo" placeholder="Vergi No"/>
+                            <input type="text" name="vergiNo" id="vergiNo" placeholder="Vergi No" required/>
                         </div>
                         <div class="input-group col-6">
                             <label>Ad</label>
-                            <input type="text" name="ad" id="ad" placeholder="Ad"/>
+                            <input type="text" name="ad" id="ad" placeholder="Ad" required/>
                         </div>
 
                         <div class="input-group col-6">
                             <label>Soyad</label>
-                            <input type="text" name="soyad" id="soyad" placeholder="Soyad"/>
+                            <input type="text" name="soyad" id="soyad" placeholder="Soyad" required/>
                         </div>
                         <div class="input-group col-6">
                             <label>E-Posta</label>
-                            <input type="email" name="email" id="email" placeholder="gibirnet@gmail.com"/>
+                            <input type="email" name="email" id="email" placeholder="gibirnet@gmail.com" required/>
                         </div>
                         <div class="input-group col-6">
                             <label>Telefon</label>
-                            <input type="tel" name="telefon" id="telefon" placeholder="0 5** *** ****"/>
+                            <input type="tel" name="telefon" id="telefon" placeholder="0 5** *** ****" required/>
                         </div>
                         <div class="input-group col-6">
                             <label>TC Kimlik No</label>
-                            <input type="text" name="tc" id="tc" placeholder="1111 1111 111"/>
+                            <input type="text" name="tc" id="tc" placeholder="1111 1111 111" required/>
                         </div>
 
                         <div class="input-group col-6">
                             <label>Dogum Tarihi</label>
-                            <input type="date" name="dogumtarih" id="dogumtarih" />
+                            <input type="date" name="dogumtarih" id="dogumtarih" required/>
                         </div>
                     </div>
                     <div class="birey mt-5">
-                        <input type="checkbox" id="bireyCheckbox" class="birey-checkbox">
+                        <input type="checkbox" id="bireyCheckbox" class="birey-checkbox" required>
                         <label for="bireyCheckbox" class="birey-checkbox-title ">Kişisel verilerimin işlenmesini izin veriyorum.</label>
                     </div>
                     <div class="birey-footer mt-2">
@@ -166,7 +166,7 @@
                         </div>
                         <div class="select-group col-6">
                             <label class="tarife-label">Şehir</label>
-                            <select class ="gecis-select" name="sehir" id="sehir">
+                            <select class ="gecis-select" name="sehir" id="sehir" required>
                                 <option ></option>
                                 <option value="">Ankara</option>
                                 <option value="">Konya</option>
@@ -174,7 +174,7 @@
                         </div>
                         <div class="select-group col-6">
                             <label class="tarife-label">İlçe</label>
-                            <select class ="gecis-select" name="ilce" id="ilce">
+                            <select class ="gecis-select" name="ilce" id="ilce" required>
                                 <option></option>
                                 <option value="">Mamak</option>
                                 <option value="">Kızılay</option>
@@ -182,7 +182,7 @@
                         </div>
                         <div class="select-group col-6">
                             <label class="tarife-label">Mahalle</label>
-                            <select class ="gecis-select" name="mahalle" id="mahalle">
+                            <select class ="gecis-select" name="mahalle" id="mahalle" required>
                                 <option></option>
                                 <option value="">Alaylar 1</option>
                                 <option value="">Alaylar 2</option>
@@ -191,7 +191,7 @@
                         </div>
                         <div class="select-group col-6">
                             <label class="tarife-label">Cadde/Sokak</label>
-                            <select class ="gecis-select" name="sokak" id="sokak">
+                            <select class ="gecis-select" name="sokak" id="sokak" required>
                                 <option></option>
                                 <option value="">Mustafa Üstündag</option>
                                 <option value="">Eti Alüminyum</option>
@@ -199,7 +199,7 @@
                         </div>
                         <div class="select-group col-6">
                             <label class="tarife-label">Dış Kapı No</label>
-                            <select class ="gecis-select" name="diskapino" id="diskapino">
+                            <select class ="gecis-select" name="diskapino" id="diskapino" required>
                                 <option></option>
                                 <option value="">17</option>
                                 <option value="">57</option>
@@ -207,7 +207,7 @@
                         </div>
                         <div class="select-group col-6">
                             <label class="tarife-label">İç Kapı No</label>
-                            <select class ="gecis-select" name="ickapino" id="ickapino">
+                            <select class ="gecis-select" name="ickapino" id="ickapino" required>
                                 <option></option>
                                 <option value="">20</option>
                                 <option value="">4</option>
@@ -225,7 +225,7 @@
                     <div class="row row-cols-2">
                         <div class="select-group col-6">
                             <label class="tarife-label">Şehir</label>
-                            <select class ="gecis-select" name="sehir" id="sehir">
+                            <select class ="gecis-select" name="sehir" id="sehir" required>
                                 <option ></option>
                                 <option value="">Ankara</option>
                                 <option value="">Konya</option>
@@ -233,7 +233,7 @@
                         </div>
                         <div class="select-group col-6">
                             <label class="tarife-label">İlçe</label>
-                            <select class ="gecis-select" name="ilce" id="ilce">
+                            <select class ="gecis-select" name="ilce" id="ilce" required>
                                 <option></option>
                                 <option value="">Mamak</option>
                                 <option value="">Kızılay</option>
@@ -241,7 +241,7 @@
                         </div>
                         <div class="select-group col-6">
                             <label class="tarife-label">Mahalle</label>
-                            <select class ="gecis-select" name="mahalle" id="mahalle">
+                            <select class ="gecis-select" name="mahalle" id="mahalle" required>
                                 <option></option>
                                 <option value="">Alaylar 1</option>
                                 <option value="">Alaylar 2</option>
@@ -250,7 +250,7 @@
                         </div>
                         <div class="select-group col-6">
                             <label class="tarife-label">Cadde/Sokak</label>
-                            <select class ="gecis-select" name="sokak" id="sokak">
+                            <select class ="gecis-select" name="sokak" id="sokak" required>
                                 <option></option>
                                 <option value="">Mustafa Üstündag</option>
                                 <option value="">Eti Alüminyum</option>
@@ -258,7 +258,7 @@
                         </div>
                         <div class="select-group col-6">
                             <label class="tarife-label">Dış Kapı No</label>
-                            <select class ="gecis-select" name="diskapino" id="diskapino">
+                            <select class ="gecis-select" name="diskapino" id="diskapino" required>
                                 <option></option>
                                 <option value="">17</option>
                                 <option value="">57</option>
@@ -266,7 +266,7 @@
                         </div>
                         <div class="select-group col-6">
                             <label class="tarife-label">İç Kapı No</label>
-                            <select class ="gecis-select" name="ickapino" id="ickapino">
+                            <select class ="gecis-select" name="ickapino" id="ickapino" required>
                                 <option></option>
                                 <option value="">20</option>
                                 <option value="">4</option>
@@ -424,13 +424,27 @@
                     </div>
                 </div>
                 <div class="paket-int" id="paket4" onclick="toggleGroup(this)">
-                    <div class="paketler-block3" id="paket4-1"></div>
-                    <div class="paketler-block3" id="paket4-2"></div>
-                    <div class="paketler-block3" id="paket4-3"></div>
+                    <div class="paketler-block3" id="paket4-1">
+                        <div class="paketler-block3-title">
+                            <h2 class="paketler-guvenlik">Güvenli İnternet Profili Kullanmak İstemiyorum</h2>
+                        </div>
+                    </div>
+                    <div class="paketler-block3" id="paket4-2">
+                        <img src="{{ asset('img/Group6.svg') }}" class="guvenlik-imgs" alt="">
+                        <div class="paketler-guvenlik1">
+                            <h2>Çocuk Profil</h2>
+                        </div>
+                    </div>
+                    <div class="paketler-block3" id="paket4-3">
+                        <img src="{{ asset('img/Group5.svg') }}" class="guvenlik-imgs" alt="">
+                        <div class="paketler-guvenlik1">
+                            <h2>Aile Profili</h2>
+                        </div>
+                    </div>
                 </div>
                 <div class="btns-group mt-3" id="paket-btn-group">
-                    <a href="#" class="btn btn-prev">Önceki</a>
-                    <a href="#" class="btn btn-next">Sonraki</a>
+                    <a href="#" class="btn btn-prev" id="paket-buton-prev">Önceki</a>
+                    <a href="#" class="btn btn-next" id="paket-buton-next">Sonraki</a>
                 </div>
             </div>
         </div>
@@ -449,21 +463,24 @@
                     </div>
                 </div>
                 <div>
-                    <div class="">
-                        <label>Abdres Bilginiz</label>
-                        <button>Adress Düzenle <i class="bi bi-pencil-square"></i></button>
+                    <div class="ozet-adress">
+                        <h5>Abdres Bilginiz</h5>
+                        <button class="ozet-adress-btn" >Adress Düzenle <i class="bi bi-pencil-square"></i></button>
                     </div>
-                    <div class="">
+                    <hr>
+                    <div class="ozet-adress-tittle">
                         <label>Şeker Mahallesi, Kerbela Sokak, No: 2 / 803, Selçuklu / KONYA</label>
                     </div>
                 </div>
                 <div>
-                    <div>
-                        <label>Tercihleriniz</label>
-                        <button>Tercih Düzenle</button>
+                    <div class="ozet-paket">
+                        <h5>Tercihleriniz</h5>
+                        <button class="ozet-paket-buton">Tercih Düzenle <i class="bi bi-pencil-square"></i></button>
                     </div>
-                    <div>
+                    <hr>
+                    <div class="ozet-paket-aciklama">
                         <div>
+
                             <ul>
                                 <li>Yeni Kurulum</li>
                                 <li>35 Mbps'e kadar indirme</li>
@@ -474,21 +491,23 @@
                                 <li>Sabit Ip İstemiyorum</li>
                             </ul>
                         </div>
-                        <div>
+                        <div class="ozet-paket-fiyat">
                             <div>
-                                <label>Yeni Kurulum(300,00 TL/6 Ay)</label>
-                                <label>50,00 TL</label>
+                                <div class="ozet-paket-fiyat-detay">
+                                    <label>Yeni Kurulum(300,00 TL/6 Ay)</label>
+                                    <label>50,00 TL</label>
+                                </div>
+                                <div class="ozet-paket-fiyat-detay">
+                                    <label>35 Mbps VDSL (Aylık)</label>
+                                    <label>100,00 TL</label>
+                                </div>
+                                <hr>
+                                <div class="ozet-paket-fiyat-detay">
+                                    <label>Toplam Tutar</label>
+                                    <label>150,00 TL</label>
+                                </div>
                             </div>
-                            <div>
-                                <label>35 Mbps VDSL (Aylık)</label>
-                                <label>100,00 TL</label>
-                            </div>
-                            <hr>
-                            <div>
-                                <label>Toplam Tutar</label>
-                                <label>150,00 TL</label>
-                            </div>
-                            <button>
+                            <button class="ozet-paket-fiyat-btn">
                                 Onayla
                             </button>
                         </div>
@@ -496,26 +515,13 @@
                 </div>
             </div>
             <div class="btns-group">
-                <a href="#" class="btn btn-prev">Önceki</a>
-                <a href="#" class="btn btn-next">Sonraki</a>
+                <a href="#" class="btn btn-prev" id="abone-buton-prev">Önceki</a>
+                <a href="#" class="btn btn-next" id="abone-buton-next">Sonraki</a>
             </div>
         </div>
         <div class="form-step">
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" />
-            </div>
-            <div class="input-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input
-                    type="password"
-                    name="confirmPassword"
-                    id="confirmPassword"
-                />
-            </div>
-            <div class="btns-group">
-                <a href="#" class="btn btn-prev">Previous</a>
-                <input type="submit" value="Submit" class="btn">
+            <div class="yonlendirme-pages">
+                {{-- Burası Yapılacak --}}
             </div>
         </div>
     </form>

@@ -16,6 +16,7 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     min-height: 100vh;
+    background-color: grey;
     /* place-items: center; */
     /* background-color: #FFFFFF;
     background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%); */
@@ -26,6 +27,7 @@ body {
 hr {
     border: 1px solid grey !important;
     padding: 0 !important;
+    margin: 4px 0 !important;
 }
 
 label {
@@ -552,18 +554,23 @@ input[type="checkbox"]:checked:before {
     display: flex;
     justify-content: center;
     margin: 10px 0;
-    width: 40%;
+    width: 30%;
     border: 4px solid var(--secondary-color);
     border-radius: 25px;
     flex-direction: column;
     flex-wrap: nowrap;
     padding: 1%;
     height: 277px;
+    align-items: center;
+}
+
+.paketler-block3-title {
+    padding: 6%;
 }
 
 .paketler-block3.selected {
     border: 4px solid var(--tertiary-color) !important;
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
 }
 
 .paket-block {
@@ -670,8 +677,8 @@ input[type="checkbox"]:checked:before {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    margin: 3% 0;
 }
-
 
 .abone-bilgi {
     display: flex;
@@ -682,4 +689,110 @@ input[type="checkbox"]:checked:before {
     font-size: larger;
     font-weight: 400;
     padding: 5px 15px;
+}
+
+.ozet-adress {
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 0px;
+}
+
+.ozet-adress-btn {
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: large;
+    font-weight: 500;
+    padding: 0 1%;
+}
+
+.bi-pencil-square {
+    margin-left: 10px;
+}
+
+.ozet-adress-tittle {
+    padding: 1% 0px 2% 0px;
+    font-size: larger;
+    font-weight: 400;
+    padding-left: 0px;
+}
+
+.ozet-paket {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ozet-paket-buton {
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: large;
+    font-weight: 500;
+    padding: 0 1%;
+}
+
+.ozet-paket-aciklama {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 0px 3% 0px;
+    font-size: larger;
+    font-weight: 400;
+}
+
+.ozet-paket-fiyat {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    border: 4px solid #399CFF;
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.ozet-paket-fiyat-detay {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px 0px 15px;
+}
+
+.ozet-paket-fiyat-btn {
+    background: #399CFF;
+    color: white;
+    border: 1px solid #399CFF;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 3%;
+    font-size: x-large;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.yonlendirme-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.paketler-guvenlik {
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.paketler-guvenlik1 {
+    font-size: x-large;
+    font-weight: 600;
+    padding: 2%;
+}
+
+.guvenlik-imgs {
+    position: unset;
+    width: 50%;
+    height: 50%;
+    opacity: 0.70;
 }

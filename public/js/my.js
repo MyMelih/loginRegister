@@ -245,3 +245,4 @@ function toggleGroup() {
     }
     window.scrollTo(0, totalHeight);
 }
+
