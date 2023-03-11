@@ -164,53 +164,53 @@
                         <div class="select-group col-12 mt-3 mb-2">
                             <p class="hizmet-no-bilgi">xDSL hizmet numarası <strong>18</strong> , <strong>88</strong> veya <strong>179</strong> ile başlayan 10 haneli bir numaradır. Farklı sayılarla başlayan numaralar geçiş işlemlerinde geçersiz sayılır ve başvuru işlemleri bu numaralar ile başlatılamaz. Eğer hizmet numaranızı bilmiyorsanız kullanmakta olduğunuz internet servis sağlayıcınızdan bu numarayı öğrenmeniz gerekir.</p>
                         </div>
-                        <div class="select-group col-6">
+                        <div class="select-group col-6" id="select-sehir">
                             <label class="tarife-label">Şehir</label>
                             <select class ="gecis-select" name="sehir" id="sehir" required>
-                                <option ></option>
-                                <option value="">Ankara</option>
-                                <option value="">Konya</option>
+                                <option value="" selected></option>
+                                <option value="Ankara">Ankara</option>
+                                <option value="Konya">Konya</option>
                             </select>
                         </div>
-                        <div class="select-group col-6">
+                        <div class="select-group col-6" id="select-ilce" >
                             <label class="tarife-label">İlçe</label>
                             <select class ="gecis-select" name="ilce" id="ilce" required>
-                                <option></option>
-                                <option value="">Mamak</option>
-                                <option value="">Kızılay</option>
+                                <option value="" selected></option>
+                                <option value="Mamak">Mamak</option>
+                                <option value="Kızılay">Kızılay</option>
                             </select>
                         </div>
-                        <div class="select-group col-6">
+                        <div class="select-group col-6" id="select-mahalle">
                             <label class="tarife-label">Mahalle</label>
                             <select class ="gecis-select" name="mahalle" id="mahalle" required>
-                                <option></option>
-                                <option value="">Alaylar 1</option>
-                                <option value="">Alaylar 2</option>
-                                <option value="">Alaylar 3</option>
+                                <option value="" selected></option>
+                                <option value="Alaylar1">Alaylar 1</option>
+                                <option value="Alaylar2">Alaylar 2</option>
+                                <option value="Alaylar3">Alaylar 3</option>
                             </select>
                         </div>
-                        <div class="select-group col-6">
+                        <div class="select-group col-6" id="select-sokak">
                             <label class="tarife-label">Cadde/Sokak</label>
                             <select class ="gecis-select" name="sokak" id="sokak" required>
-                                <option></option>
-                                <option value="">Mustafa Üstündag</option>
-                                <option value="">Eti Alüminyum</option>
+                                <option value="" selected></option>
+                                <option value="MÜ">Mustafa Üstündag</option>
+                                <option value="EA">Eti Alüminyum</option>
                             </select>
                         </div>
-                        <div class="select-group col-6">
+                        <div class="select-group col-6" id="select-diskapino">
                             <label class="tarife-label">Dış Kapı No</label>
                             <select class ="gecis-select" name="diskapino" id="diskapino" required>
-                                <option></option>
-                                <option value="">17</option>
-                                <option value="">57</option>
+                                <option value="" selected></option>
+                                <option value="17">17</option>
+                                <option value="57">57</option>
                             </select>
                         </div>
-                        <div class="select-group col-6">
+                        <div class="select-group col-6" id="select-ickapino">
                             <label class="tarife-label">İç Kapı No</label>
                             <select class ="gecis-select" name="ickapino" id="ickapino" required>
-                                <option></option>
-                                <option value="">20</option>
-                                <option value="">4</option>
+                                <option value="" selected></option>
+                                <option value="20">20</option>
+                                <option value="4">4</option>
                             </select>
                         </div>
                     </div>

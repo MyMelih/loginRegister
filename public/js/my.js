@@ -48,7 +48,8 @@ function updateProgressBar() {
 //  Progress Bar Bitiş //
 
 
-// Abone Sayfası Form Yönlendirme Bölümleri
+//? Abone Sayfası Form Yönlendirme Bölümleri //
+
 var bireyselButon = document.getElementById("bireysel");
 var kurumsalButon = document.getElementById("kurumsal");
 
@@ -67,6 +68,53 @@ kurumsalButon.onclick = function () {
     bireyselForm.style.display = "none";
     firmaForm.style.display = "block";
 }
+
+//? Select Box Seçme Style
+
+function showSelectBox() {
+    var sehir = document.querySelector("#select-sehir");
+    var ilce = document.querySelector("#select-ilce");
+    var mahalle = document.querySelector("#select-mahalle");
+    var cadde = document.querySelector("#select-sokak");
+    var diskapi = document.querySelector("#select-diskapino");
+    var ickapi = document.querySelector("#select-ickapino");
+
+    sehir.style.display = "flex";
+    ilce.style.display = "none";
+    mahalle.style.display = "none";
+    cadde.style.display = "none";
+    diskapi.style.display = "none";
+    ickapi.style.display = "none";
+}
+
+document.getElementById("firma-buton-next").onclick = showSelectBox;
+document.getElementById("abone-buton-next").onclick = showSelectBox;
+
+function showSelectBox2(selectId) {
+    var select = document.querySelector(selectId);
+    select.style.display = "flex";
+    select.style.animation = "animate1 0.75s ease-in-out forwards";
+}
+
+document.getElementById("sehir").addEventListener("change", function () {
+    showSelectBox2("#select-ilce");
+});
+
+document.getElementById("ilce").addEventListener("change", function () {
+    showSelectBox2("#select-mahalle");
+});
+
+document.getElementById("mahalle").addEventListener("change", function () {
+    showSelectBox2("#select-sokak")
+})
+
+document.getElementById("sokak").addEventListener("change", function () {
+    showSelectBox2("#select-diskapino")
+})
+
+document.getElementById("diskapino").addEventListener("change", function () {
+    showSelectBox2("#select-ickapino")
+})
 
 //Paket Seçme WaterFall Style
 
@@ -88,6 +136,7 @@ function showPackage1() {
 
 document.getElementById("bilgi-gecis-buton-next").onclick = showPackage1;
 document.getElementById("bilgi-yeni-buton-next").onclick = showPackage1;
+
 
 // Paket Seçme Bölümleri
 
