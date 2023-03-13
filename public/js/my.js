@@ -78,6 +78,15 @@ function showSelectBox() {
     var cadde = document.querySelector("#select-sokak");
     var diskapi = document.querySelector("#select-diskapino");
     var ickapi = document.querySelector("#select-ickapino");
+    var gecisButon = document.querySelector("#gecis-buton-next");
+
+    var ykSehir = document.querySelector("#select-yk-sehir");
+    var ykIlce = document.querySelector("#select-yk-ilce");
+    var ykMahalle = document.querySelector("#select-yk-mahalle");
+    var ykCadde = document.querySelector("#select-yk-sokak");
+    var ykDiskapi = document.querySelector("#select-yk-diskapino");
+    var ykIckapi = document.querySelector("#select-yk-ickapino");
+    var yeniButon = document.querySelector("#yeni-buton-next");
 
     sehir.style.display = "flex";
     ilce.style.display = "none";
@@ -85,10 +94,21 @@ function showSelectBox() {
     cadde.style.display = "none";
     diskapi.style.display = "none";
     ickapi.style.display = "none";
+    gecisButon.style.display = "none";
+
+    ykSehir.style.display = "flex";
+    ykIlce.style.display = "none";
+    ykMahalle.style.display = "none";
+    ykCadde.style.display = "none";
+    ykDiskapi.style.display = "none";
+    ykIckapi.style.display = "none";
+    yeniButon.style.display = "none";
+
 }
 
-document.getElementById("firma-buton-next").onclick = showSelectBox;
-document.getElementById("abone-buton-next").onclick = showSelectBox;
+document.getElementById("internetVar").onclick = showSelectBox;
+document.getElementById("internetYok").onclick = showSelectBox;
+
 
 function showSelectBox2(selectId) {
     var select = document.querySelector(selectId);
@@ -115,6 +135,40 @@ document.getElementById("sokak").addEventListener("change", function () {
 document.getElementById("diskapino").addEventListener("change", function () {
     showSelectBox2("#select-ickapino")
 })
+
+document.getElementById("ickapino").addEventListener("change", function () {
+    showSelectBox2("#gecis-buton-next")
+})
+
+
+document.getElementById("yk-sehir").addEventListener("change", function () {
+    showSelectBox2("#select-yk-ilce");
+});
+
+document.getElementById("yk-ilce").addEventListener("change", function () {
+    showSelectBox2("#select-yk-mahalle");
+});
+
+document.getElementById("yk-mahalle").addEventListener("change", function () {
+    showSelectBox2("#select-yk-sokak")
+})
+
+document.getElementById("yk-sokak").addEventListener("change", function () {
+    showSelectBox2("#select-yk-diskapino")
+})
+
+document.getElementById("yk-diskapino").addEventListener("change", function () {
+    showSelectBox2("#select-yk-ickapino")
+})
+
+document.getElementById("yk-ickapino").addEventListener("change", function () {
+    showSelectBox2("#yeni-buton-next")
+})
+
+//? Kurulum Buton gösterim
+
+
+
 
 //Paket Seçme WaterFall Style
 
@@ -181,7 +235,6 @@ document.getElementById("paket4-2").onclick = function () {
 document.getElementById("paket4-3").onclick = function () {
     showPackage("#paket-btn-group");
 }
-
 
 
 

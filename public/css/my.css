@@ -2,6 +2,7 @@
     --primary-color: #F29100;
     --secondary-color: #4A4A4A;
     --tertiary-color: #33AA22;
+    --special-color: #F5F5F5;
 
 }
 
@@ -16,10 +17,10 @@ body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     min-height: 100vh;
-    background-color: grey;
+    /* background-color: grey; */
     /* place-items: center; */
-    /* background-color: #FFFFFF;
-    background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%); */
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
 }
 
 
@@ -150,7 +151,7 @@ input[type="checkbox"]:checked:before {
     height: 4px;
     width: 100%;
     background-color: #767676;
-    z-index: -1;
+    z-index: 1;
 }
 
 .progress1 {
@@ -167,6 +168,7 @@ input[type="checkbox"]:checked:before {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .progress-step::before {
@@ -185,6 +187,7 @@ input[type="checkbox"]:checked:before {
 .progress-step-active {
     background-color: var(--primary-color);
     color: #fff;
+    z-index: 1;
 }
 
 /* Form Stylings */
@@ -197,6 +200,7 @@ input[type="checkbox"]:checked:before {
     padding: 2rem 4rem;
     height: min-content !important;
     margin-bottom: 200px !important;
+    background-color: var(--special-color);
 }
 
 .form-step {
@@ -345,6 +349,7 @@ input[type="checkbox"]:checked:before {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-top: 3rem;
 }
 
 .birey-checkbox {
@@ -795,4 +800,383 @@ input[type="checkbox"]:checked:before {
     width: 50%;
     height: 50%;
     opacity: 0.70;
+}
+
+.goster {
+    display: none;
+}
+
+/* Responsive Tasarım */
+
+/* Dizüstü Modu */
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .form {
+        width: 80%;
+        background-color: var(--special-color);
+    }
+
+    .paketler-block {
+        width: 46%;
+    }
+
+    .paketler-block1 {
+        width: 46%;
+        height: 201px;
+    }
+
+    .paketler-block2 {
+        width: 46%;
+        height: 201px;
+    }
+
+    .paketler-block3 {
+        height: 201px;
+    }
+
+    .paket-block {
+        padding: 1% 4%;
+    }
+
+    .icon-style {
+        font-size: larger;
+    }
+
+    .paket-hiz-title {
+        font-size: x-large;
+    }
+
+
+    .paket-hiz-ozellik {
+        font-size: initial;
+    }
+
+    .model-isim {
+        font-size: initial;
+        font-weight: revert;
+    }
+
+    .model-list {
+        font-size: x-large;
+        font-weight: 700;
+    }
+
+    .model-list-fiyat-tur {
+        font-size: initial;
+        font-weight: 700;
+    }
+
+    .ip-fiyat {
+        font-size: x-large;
+        font-weight: 700;
+    }
+
+    .ip-fiyat-tur {
+        font-size: revert;
+        font-weight: inherit;
+    }
+
+    .ozet-paket-fiyat {
+        font-size: inherit;
+    }
+
+
+    .paketler-guvenlik {
+        font-size: 1.5rem;
+    }
+
+    .paketler-guvenlik1 {
+        font-size: revert;
+    }
+
+    .guvenlik-imgs {
+        width: 40%;
+        height: 40%;
+    }
+
+    .goster {
+        display: none;
+    }
+
+}
+
+
+/* Tablet Modu */
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+
+    /* Global Stylings */
+    h2 {
+        font-size: large !important;
+        /* font-size: x-large !important; */
+    }
+
+    .form {
+        width: 100%;
+        padding: 2rem 1.3rem;
+        background-color: var(--special-color);
+    }
+
+    .step-title {
+        font-size: xx-large !important;
+    }
+
+    /* Button Stylings */
+    .btn {
+        border: 2px solid var(--primary-color) !important;
+    }
+
+    .btns-group {
+        margin: 2% 0 !important;
+    }
+
+    .select-group {
+        padding: 2% 1% !important;
+    }
+
+    .bilgilendirme-page {
+        width: 65% !important;
+    }
+
+    .hiz-sonuc {
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    .sonuc-groups {
+        width: 100%;
+        padding: 2% 5%;
+    }
+
+    .paketler-block {
+        width: 46%;
+    }
+
+    .paketler-block1 {
+        width: 46%;
+        height: 210px;
+    }
+
+    .paketler-block2 {
+        width: 46%;
+        height: 210px;
+    }
+
+    .paketler-block3 {
+        height: 210px;
+    }
+
+
+    .paket-block {
+        padding: 2% 1%;
+    }
+
+    .icon-style {
+        font-size: large;
+    }
+
+    .paket-hiz-title {
+        font-size: large;
+    }
+
+    .paket-hiz-turu {
+        font-size: large;
+        padding-left: 1%;
+    }
+
+    .paket-hiz-ozellik {
+        font-size: revert;
+        padding-left: 4%;
+    }
+
+    .model-isim {
+        font-size: larger;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    .model-list {
+        font-size: larger;
+    }
+
+    .model-list-fiyat-tur {
+        font-size: small;
+    }
+
+    .ip-fiyat-tur {
+        font-size: small;
+    }
+
+    .abone-bilgi {
+        border: 2px solid var(--secondary-color);
+        width: 46%;
+    }
+
+    .ozet-paket-fiyat {
+        font-size: small;
+    }
+
+    .paketler-guvenlik {
+        font-size: inherit !important;
+        font-weight: 700;
+    }
+
+    .paketler-guvenlik1 {
+        font-size: larger !important;
+        font-weight: 500 !important;
+        padding: 1%;
+    }
+
+    .guvenlik-imgs {
+        position: unset;
+        width: 35%;
+        height: 35%;
+        opacity: 0.70;
+    }
+
+    .ozet-paket-title {
+        font-size: smaller;
+        font-weight: 400;
+    }
+
+    .goster {
+        display: none;
+    }
+}
+
+/* Telefon Modu */
+
+@media only screen and (max-width: 480px) {
+
+    input {
+        border: 2px solid #E5E5E5;
+        border-radius: 25px !important;
+        color: #E5E5E5;
+        font-size: medium;
+        padding: 2% 0px;
+        padding-left: 6%;
+    }
+
+    input[type="date"] {
+        padding-right: 5%;
+    }
+
+    .gizle {
+        display: none;
+    }
+
+    .goster {
+        display: block;
+    }
+
+    .tarife-label {
+        display: none;
+    }
+
+    .text-center {
+        display: none;
+    }
+
+    .progressbar {
+        margin: 2rem 0 0.25rem !important;
+    }
+
+    .progress-step::after {
+        content: none !important;
+    }
+
+    .form {
+        width: 100%;
+        padding: 1% 5%;
+        background-color: var(--special-color);
+        margin-top: 0px !important;
+    }
+
+    .mobil-step {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .abone {
+        margin-top: 0 !important;
+        width: 100%;
+        padding: 80% 0px;
+    }
+
+    .step-title {
+        margin-bottom: 0px;
+    }
+
+    .abone-group {
+        border: 2px solid var(--special-color);
+        background-color: #FFFFFF;
+        padding: 15% 8%;
+        border-radius: 25px;
+        margin-top: 3% !important;
+    }
+
+    .input-group {
+        max-width: 100% !important;
+        flex: none !important;
+        padding: 9px;
+        margin: 0px;
+    }
+
+    .mobile-firma-title-gizle {
+        display: none;
+    }
+
+    .mobile-firma-title-goster {
+        display: flex;
+        font-size: revert;
+        color: #4A4A4A;
+
+    }
+
+    .firma-page {
+        display: block;
+        margin-left: -10px;
+        margin-right: -10px;
+        padding: 3% 2%;
+    }
+
+    .mobile-firma {
+        margin: 0 !important;
+        border: 2px solid #FFFFFF;
+        border-radius: 20px;
+        width: 100%;
+        background: #FFFFFF;
+    }
+
+    .birey {
+        margin-top: 5% !important;
+    }
+
+    .birey-checkbox {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .birey-checkbox-title {
+        font-weight: 400;
+    }
+
+    .birey-footer-aciklama {
+        font-size: small;
+        font-weight: 300;
+
+    }
+
+    .btns-abonelik-mobile {
+        margin-top: 0px !important;
+    }
+
+    .birey-footer {
+        padding: 0px 3%;
+    }
 }
