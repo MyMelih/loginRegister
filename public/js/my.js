@@ -348,3 +348,30 @@ function toggleGroup() {
     window.scrollTo(0, totalHeight);
 }
 
+
+function changeDesign() {
+    var ykSehir = document.getElementById("yk-sehir");
+    var ykIlce = document.getElementById("yk-ilce");
+    var ykMahalle = document.getElementById("yk-mahalle");
+    var ykSokak = document.getElementById("yk-sokak");
+    var ykDisKapi = document.getElementById("yk-diskapino");
+    var ykIcKapi = document.getElementById("yk-ickapino");
+
+    var sehir = document.getElementById("sehir");
+    var ilce = document.getElementById("ilce");
+    var mahalle = document.getElementById("mahalle");
+    var sokak = document.getElementById("sokak");
+    var disKapi = document.getElementById("diskapino");
+    var icKapi = document.getElementById("ickapino");
+
+    const yeniKurulum = [ykSehir, ykIlce, ykMahalle, ykSokak, ykDisKapi, ykIcKapi, sehir, ilce, mahalle, sokak, disKapi, icKapi];
+
+    for (let i = 0; i < yeniKurulum.length; i++) {
+        if (yeniKurulum[i].value != "") {
+            yeniKurulum[i].style.color = "black";
+            yeniKurulum[i].style.backgroundColor = "white !important";
+            yeniKurulum[i].style.border = "2px solid var(--primary-color)";
+            yeniKurulum[i].style.borderRadius = "20px"
+        }
+    }
+}

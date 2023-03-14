@@ -806,6 +806,14 @@ input[type="checkbox"]:checked:before {
     display: none;
 }
 
+.paket-title {
+    display: none;
+}
+
+.paket-hr {
+    display: none;
+}
+
 /* Responsive Tasarım */
 
 /* Dizüstü Modu */
@@ -902,6 +910,13 @@ input[type="checkbox"]:checked:before {
         display: none;
     }
 
+    .paket-title {
+        display: none;
+    }
+
+    .paket-hr {
+        display: none;
+    }
 }
 
 
@@ -1046,6 +1061,14 @@ input[type="checkbox"]:checked:before {
     .goster {
         display: none;
     }
+
+    .paket-title {
+        display: none;
+    }
+
+    .paket-hr {
+        display: none;
+    }
 }
 
 /* Telefon Modu */
@@ -1065,8 +1088,13 @@ input[type="checkbox"]:checked:before {
         padding-right: 5%;
     }
 
+    select:focus {
+        background-color: white;
+        color: var(--secondary-color);
+    }
+
     .gizle {
-        display: none;
+        display: none !important;
     }
 
     .goster {
@@ -1096,11 +1124,11 @@ input[type="checkbox"]:checked:before {
         margin-top: 0px !important;
     }
 
-    .mobil-step {
+    /* .mobil-step {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+    } */
 
     .abone {
         margin-top: 0 !important;
@@ -1179,4 +1207,312 @@ input[type="checkbox"]:checked:before {
     .birey-footer {
         padding: 0px 3%;
     }
+
+    .btns-group {
+        margin-bottom: 10%;
+    }
+
+    .step-title {
+        font-size: revert;
+        font-weight: 400;
+    }
+
+    .hizmet-no-bilgi {
+        font-size: small;
+        font-weight: 400;
+    }
+
+    .mobile-abonelik {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .select-group {
+        display: flex;
+        max-width: 100% !important;
+    }
+
+    .gecis-select {
+        width: 100%;
+        margin-top: 5%;
+        color: #E5E5E5;
+        font-size: large;
+        padding-left: 4%;
+        font-weight: 500;
+        border: 2px solid #E5E5E5;
+    }
+
+    .altyapı-sorgu {
+        margin-top: 60%;
+        font-size: revert;
+        font-weight: 600;
+    }
+
+    .bilgilendirme-page {
+        width: 80% !important;
+        border: 2px solid #E5E5E5;
+        background-color: white;
+    }
+
+    .sonuc-boxs {
+        border: none;
+    }
+
+    .sonuc-groups {
+        border-bottom: 1px solid #E5E5E5;
+        padding-bottom: 1px;
+    }
+
+    .sonuc-groups:last-child {
+        border-bottom: none;
+        padding-bottom: 1px;
+    }
+
+
+    .sonuc-label {
+        font-weight: 500;
+        font-size: medium;
+    }
+
+    .yeni-tarife-bilgilendirme {
+        margin-bottom: 50%;
+    }
+
+    .gecis-tarife-bilgilendirme {
+        margin-bottom: 50%
+    }
+
+    .paketler-block {
+        padding: 5px;
+        background-color: white;
+        width: 48%;
+    }
+
+    .paket-block {
+        width: 100%;
+    }
+
+    .paket-hiz-title {
+        font-size: inherit;
+        font-weight: 500;
+    }
+
+    .paket-hiz-turu {
+        font-size: inherit;
+        font-weight: 500;
+        padding-left: 0px;
+    }
+
+    .paket-aciklama {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .icon-style {
+        font-size: inherit;
+        background: none;
+    }
+
+    .paket-hiz-ozellik {
+        font-size: 11px;
+        padding-left: 4px;
+    }
+
+    .paketler-block1 {
+        height: 167px;
+        width: 48%;
+    }
+
+    .paket-block-modem {
+        font-size: 15px !important;
+    }
+
+    .modem-left {
+        width: 65%;
+    }
+
+    .model-isim {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .model-list {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    .model-list-fiyat-tur {
+        top: 12px !important;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .paketler-block2 {
+        height: 167px;
+        width: 48%;
+    }
+
+    .paket-sabit-notip {
+        font-size: 15px !important;
+    }
+
+
+    .paket-sabit-ip {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .ip-fiyat {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .ip-fiyat-tur {
+        top: 25px !important;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .paketler-block3 {
+        height: 100px;
+    }
+
+    .paketler-block3-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .paketler-guvenlik {
+        margin: 0px;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .guvenlik-imgs {
+        display: none;
+    }
+
+    .paket-guvenlik {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0px;
+    }
+
+    .paket-title {
+        display: block;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        margin: 2% 0px;
+    }
+
+    .paket-int {
+        flex-wrap: wrap;
+    }
+
+    .paket-hr {
+        display: block;
+        width: 100%;
+    }
+
+    .ozet-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .ozet-form-baslik {
+        text-align: center;
+    }
+
+    .abone-bilgi-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .abone-bilgi {
+        width: 100%;
+        border: 2px solid #9a9999;
+        margin: 2% 0px;
+        color: #434343;
+    }
+
+    .ozet-form-adress {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .ozet-adress {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ozet-adress-btn {
+        display: none;
+    }
+
+    .ozet-adress-tittle {
+        font-size: inherit;
+        font-weight: 500;
+    }
+
+    .ozet-form-paket {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-top: 4%;
+    }
+
+    .ozet-paket-buton {
+        display: none;
+    }
+
+    .ozet-paket-aciklama {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .ozet-paket-title>ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-left: 4%;
+        align-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .ozet-paket-title>ul>li {
+        width: 48%;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .ozet-paket-fiyat {
+        background: white;
+    }
+
+    .ozet-paket-fiyat-detay {
+        font-size: 18px;
+        padding: 2% 2%;
+    }
+
+    .ozet-paket-fiyat-detay>label {
+        padding: 0px;
+    }
+
 }
