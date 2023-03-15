@@ -69,6 +69,71 @@ kurumsalButon.onclick = function () {
     firmaForm.style.display = "block";
 }
 
+//? Abone Sayfası Form Yönlendirme Bölümleri //
+
+// İnput içlerindeki değerlerin boş olup olmadığını kontrol eden fonksiyon....
+
+$(document).ready(function () {
+    const aboneControl = {
+        ad: document.getElementById("ad"),
+        soyad: document.getElementById("soyad"),
+        mail: document.getElementById("mail"),
+        telefon: document.getElementById("telefon"),
+        tc: document.getElementById("tc"),
+        dogumtarih: document.getElementById("dogumtarih"),
+        kisiselVeri: document.getElementById("bireyCheckbox"),
+    };
+
+    const aboneButonNext = document.getElementById("abone-buton-next");
+    aboneButonNext.classList.add("disabled");
+
+    Object.values(aboneControl).forEach((input) => {
+        input.addEventListener("input", function () {
+            if (
+                Object.values(aboneControl).every((input) => input.value !== "") &&
+                aboneControl.kisiselVeri.checked
+            ) {
+                aboneButonNext.classList.remove("disabled");
+            } else {
+                aboneButonNext.classList.add("disabled");
+            }
+        });
+    });
+});
+
+// Firma abone formu için input kontrolü
+
+$(document).ready(function () {
+    const firmaAboneControl = {
+        firmaAd: document.getElementById("firmaAdi"),
+        vergiDaire: document.getElementById("vergiDaire"),
+        vergiNo: document.getElementById("vergiNo"),
+        ad: document.getElementById("ad"),
+        soyad: document.getElementById("soyad"),
+        mail: document.getElementById("mail"),
+        telefon: document.getElementById("telefon"),
+        tc: document.getElementById("tc"),
+        dogumtarih: document.getElementById("dogumtarih"),
+        kisiselVeri: document.getElementById("firmaCheckbox"),
+    };
+
+    const firmaAboneButonNext = document.getElementById("firma-buton-next");
+    firmaAboneButonNext.classList.add("disabled");
+
+    Object.values(firmaAboneControl).forEach((input) => {
+        input.addEventListener("input", function () {
+            if (
+                Object.values(firmaAboneControl).every((input) => input.value !== "") &&
+                firmaAboneControl.kisiselVeri.checked
+            ) {
+                firmaAboneButonNext.classList.remove("disabled");
+            } else {
+                firmaAboneButonNext.classList.add("disabled");
+            }
+        });
+    });
+});
+
 //? Select Box Seçme Style
 
 function showSelectBox() {
@@ -236,9 +301,10 @@ document.getElementById("paket4-3").onclick = function () {
     showPackage("#paket-btn-group");
 }
 
+// Paket Seçme End //
 
 
-// Aboen Sayfalarına yöneldirme Bölümleri
+// Abone Sayfalarına yöneldirme Bölümleri
 $(document).ready(function () {
     $("#bireysel").click(function () {
         $(".abone-second-page").show();
@@ -348,6 +414,7 @@ function toggleGroup() {
     window.scrollTo(0, totalHeight);
 }
 
+// Seçilen Selectboxların tasarımını değiştirme...
 
 function changeDesign() {
     var ykSehir = document.getElementById("yk-sehir");
@@ -375,3 +442,8 @@ function changeDesign() {
         }
     }
 }
+
+
+
+
+

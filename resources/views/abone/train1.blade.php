@@ -41,7 +41,7 @@
                     <h2 class="step-title mobile-gecis-title-gizle">Bireysel Abonelik</h2>
                     <hr class="gizle">
                     <div class="row row-cols-2 mobile-gecis">
-                        <h2 class="step-title mobile-gecis-title-goster col-12 mt-3">Gecis Abonelik</h2>
+                        <h2 class="step-title mobile-gecis-title-goster col-12 mt-3 goster">Bireysel Abonelik</h2>
                         <div class="input-group col-6">
                             <label class="gizle">Ad</label>
                             <input type="text" name="ad" id="ad" placeholder="Ad" required/>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="birey">
-                        <input type="checkbox" id="bireyCheckbox" class="birey-checkbox" required>
+                        <input type="checkbox" id="bireyCheckbox" name="bireyCheckbox" class="birey-checkbox" required>
                         <label for="bireyCheckbox" class="birey-checkbox-title ">Kişisel verilerimin işlenmesini izin veriyorum.</label>
                     </div>
                     <div class="birey-footer mt-2">
@@ -85,7 +85,7 @@
                     <h2 class="step-title mobile-firma-title-gizle">Firma Abonelik</h2>
                     <hr class="gizle">
                     <div class="row row-cols-2 mobile-firma">
-                        <h2 class="step-title mobile-firma-title-goster col-12 mt-3">Firma Abonelik</h2>
+                        <h2 class="step-title mobile-firma-title-goster col-12 mt-3 goster">Firma Abonelik</h2>
                         <div class="input-group col-12">
                             <label class="gizle">Firma Adı</label>
                             <input type="text" name="firmaAdi" id="firmaAdi" placeholder="Firma Adı" required/>
@@ -126,8 +126,8 @@
                         </div>
                     </div>
                     <div class="birey">
-                        <input type="checkbox" id="bireyCheckbox" class="birey-checkbox" required>
-                        <label for="bireyCheckbox" class="birey-checkbox-title ">Kişisel verilerimin işlenmesini izin veriyorum.</label>
+                        <input type="checkbox" id="firmaCheckbox" class="birey-checkbox" required>
+                        <label for="firmaCheckbox" class="birey-checkbox-title ">Kişisel verilerimin işlenmesini izin veriyorum.</label>
                     </div>
                     <div class="birey-footer mt-2">
                         <p class="birey-footer-aciklama">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta recusandae enim nulla ab consequuntur sequi! Velit illo necessitatibus architecto eveniet ducimus perferendis sed, omnis nulla alias dicta commodi eum ipsam.
