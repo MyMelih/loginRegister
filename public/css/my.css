@@ -495,6 +495,7 @@ input[type="checkbox"]:checked:before {
 }
 
 .paketler-block {
+    background: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -512,6 +513,7 @@ input[type="checkbox"]:checked:before {
 }
 
 .paketler-block1 {
+    background: white;
     cursor: pointer;
     display: flex;
     justify-content: space-around;
@@ -534,6 +536,7 @@ input[type="checkbox"]:checked:before {
 }
 
 .paketler-block2 {
+    background: white;
     cursor: pointer;
     display: flex;
     justify-content: space-around;
@@ -555,6 +558,7 @@ input[type="checkbox"]:checked:before {
 }
 
 .paketler-block3 {
+    background: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -1098,7 +1102,7 @@ input[type="checkbox"]:checked:before {
     }
 
     .goster {
-        display: block;
+        display: block !important;
     }
 
     .tarife-label {
@@ -1166,6 +1170,17 @@ input[type="checkbox"]:checked:before {
 
     }
 
+    .mobile-gecis-title-gizle {
+        display: none;
+    }
+
+    .mobile-gecis-title-goster {
+        display: flex;
+        font-size: revert;
+        color: #4A4A4A;
+
+    }
+
     .firma-page {
         display: block;
         margin-left: -10px;
@@ -1174,6 +1189,14 @@ input[type="checkbox"]:checked:before {
     }
 
     .mobile-firma {
+        margin: 0 !important;
+        border: 2px solid #FFFFFF;
+        border-radius: 20px;
+        width: 100%;
+        background: #FFFFFF;
+    }
+
+    .mobile-gecis {
         margin: 0 !important;
         border: 2px solid #FFFFFF;
         border-radius: 20px;
@@ -1440,9 +1463,13 @@ input[type="checkbox"]:checked:before {
 
     .abone-bilgi {
         width: 100%;
-        border: 2px solid #9a9999;
+        border: 1px solid #E5E5E5;
         margin: 2% 0px;
-        color: #434343;
+        color: black;
+        padding: 1% 5%;
+        font-size: initial;
+        font-weight: 400;
+        background-color: white;
     }
 
     .ozet-form-adress {
@@ -1459,11 +1486,16 @@ input[type="checkbox"]:checked:before {
 
     .ozet-adress-btn {
         display: none;
+        font-size: smaller;
+        font-weight: 500;
+        padding: 1px 3%;
+        float: right;
+        margin-bottom: 3%;
     }
 
     .ozet-adress-tittle {
-        font-size: inherit;
-        font-weight: 500;
+        font-size: small;
+        font-weight: 400;
     }
 
     .ozet-form-paket {
@@ -1476,6 +1508,11 @@ input[type="checkbox"]:checked:before {
 
     .ozet-paket-buton {
         display: none;
+        font-size: smaller;
+        font-weight: 500;
+        padding: 1px 3%;
+        float: right;
+        margin-bottom: 3%;
     }
 
     .ozet-paket-aciklama {
@@ -1503,16 +1540,75 @@ input[type="checkbox"]:checked:before {
     }
 
     .ozet-paket-fiyat {
+        border: 2px solid #399cff;
+        border-radius: 14px;
         background: white;
     }
 
     .ozet-paket-fiyat-detay {
         font-size: 18px;
-        padding: 2% 2%;
+        padding: 0px 2%;
+        font-weight: 500;
+        color: #4A4A4A;
     }
 
     .ozet-paket-fiyat-detay>label {
         padding: 0px;
+    }
+
+    .tarife {
+        display: flex;
+        flex-direction: column;
+        margin: 50% 0px !important;
+        padding: 4%;
+        background: white;
+        border: 2px solid #E5E5E5;
+        border-radius: 20px;
+    }
+
+    .mobile-s-t {
+        padding: 3% 0px;
+        font-size: large;
+        font-weight: 500;
+    }
+
+    .bireysel-page {
+        margin-top: 7%;
+    }
+
+    .mobile-ozet-page {
+        margin-top: 4%;
+    }
+
+    .ozet-adress>h5 {
+        font-size: large;
+        font-weight: 400;
+    }
+
+    .ozet-adress-tittle>label {
+        text-align: center;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .ozet-paket>h5 {
+        font-weight: 400;
+        font-size: large;
+    }
+
+    .ozet-paket-title>ul>li {
+        color: #4A4A4A;
+        font-weight: 400;
+    }
+
+    .ozet-guvenlik-profil {
+        text-align: center;
+        font-weight: 400;
+        margin: 3%;
+    }
+
+    .ozet-paket-fiyat-genel {
+        padding-top: 2%;
     }
 
 }

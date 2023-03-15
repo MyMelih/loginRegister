@@ -37,9 +37,11 @@
             </div>
             <div class="abone-second-page">
                 <div class="bireysel-page">
-                    <h2 class="step-title">Bireysel Abonelik</h2>
-                    <hr>
-                    <div class="row row-cols-2">
+                    <hr class="goster mb-5">
+                    <h2 class="step-title mobile-gecis-title-gizle">Bireysel Abonelik</h2>
+                    <hr class="gizle">
+                    <div class="row row-cols-2 mobile-gecis">
+                        <h2 class="step-title mobile-gecis-title-goster col-12 mt-3">Gecis Abonelik</h2>
                         <div class="input-group col-6">
                             <label class="gizle">Ad</label>
                             <input type="text" name="ad" id="ad" placeholder="Ad" required/>
@@ -65,7 +67,7 @@
                             <input style="padding-left: .90rem" type="date" name="dogumtarih" id="dogumtarih" required/>
                         </div>
                     </div>
-                    <div class="birey mt-5">
+                    <div class="birey">
                         <input type="checkbox" id="bireyCheckbox" class="birey-checkbox" required>
                         <label for="bireyCheckbox" class="birey-checkbox-title ">Kişisel verilerimin işlenmesini izin veriyorum.</label>
                     </div>
@@ -139,8 +141,8 @@
             </div>
         </div>
         <div class="form-step">
-            <div class="tarife mt-3">
-                <h2 class="step-title">Abonelik Başvuru Tipini Seçiniz</h2>
+            <div class="tarife">
+                <h2 class="step-title mobile-s-t">Abonelik Başvuru Tipini Seçiniz</h2>
                 <hr>
                 <div class="tarife-group mt-4">
                     <div class="tarife-btns">
@@ -459,12 +461,13 @@
             </div>
         </div>
         <div class="form-step">
-            <div>
+            <div class="mobile-ozet-page">
+                <hr class="goster">
                 <div class="ozet-form">
                     <div class="ozet-form-baslik">
                         <h5>Abone Bilgileriniz</h5>
                     </div>
-                    <hr>
+                    <hr class="gizle">
                     <div class="abone-bilgi-list">
                         <label class="abone-bilgi">Abdurrahman</label>
                         <label class="abone-bilgi">Yanbakanoğulları</label>
@@ -472,20 +475,25 @@
                         <label class="abone-bilgi">(530) 123 45 67</label>
                     </div>
                 </div>
+                <hr class="goster">
                 <div class="ozet-form-adress">
                     <div class="ozet-adress">
                         <h5>Adres Bilginiz</h5>
-                        <button class="ozet-adress-btn" >Adress Düzenle <i class="bi bi-pencil-square"></i></button>
+                        <button class="ozet-adress-btn gizle" >Adress Düzenle <i class="bi bi-pencil-square"></i></button>
                     </div>
-                    <hr>
+                    <hr class="gizle">
                     <div class="ozet-adress-tittle">
                         <label>Şeker Mahallesi, Kerbela Sokak, No: 2 / 803, Selçuklu / KONYA</label>
                     </div>
+                    <div>
+                        <button class="ozet-adress-btn goster" >Adress Düzenle <i class="bi bi-pencil-square"></i></button>
+                    </div>
                 </div>
+                <hr class="goster">
                 <div class="ozet-form-paket">
                     <div class="ozet-paket">
                         <h5>Tercihleriniz</h5>
-                        <button class="ozet-paket-buton">Tercih Düzenle <i class="bi bi-pencil-square"></i></button>
+                        <button class="ozet-paket-buton gizle">Tercih Düzenle <i class="bi bi-pencil-square"></i></button>
                     </div>
                     <hr>
                     <div class="ozet-paket-aciklama">
@@ -500,8 +508,13 @@
                                 <li>Sabit Ip İstemiyorum</li>
                             </ul>
                         </div>
+                        <div class="goster">
+                            <button class="ozet-paket-buton goster">Tercih Düzenle<i class="bi bi-pencil-square"></i></button>
+                        </div>
+                        <hr class="goster">
+                        <h5 class="ozet-guvenlik-profil goster">Güvenli İnternet Profilini Seçin</h5>
                         <div class="ozet-paket-fiyat">
-                            <div>
+                            <div class="ozet-paket-fiyat-genel">
                                 <div class="ozet-paket-fiyat-detay">
                                     <label>Yeni Kurulum(300,00 TL/6 Ay)</label>
                                     <label>50,00 TL</label>
