@@ -28,7 +28,6 @@ function updateFormSteps() {
         formStep.classList.contains("form-step-active") &&
             formStep.classList.remove("form-step-active");
     });
-
     formSteps[formStepsNum].classList.add("form-step-active");
 }
 
@@ -165,11 +164,6 @@ document.getElementById("yk-diskapino").addEventListener("change", function () {
 document.getElementById("yk-ickapino").addEventListener("change", function () {
     showSelectBox2("#yeni-buton-next")
 })
-
-//? Kurulum Buton gösterim
-
-
-
 
 //Paket Seçme WaterFall Style
 
@@ -455,6 +449,13 @@ function changeDesign() {
 }
 
 
+$("#adress-duzenle-buton").click(function () {
+    $(".form-steps-active").hide();
+    formSteps[3].classList.remove("form-steps-active");
+    $($(this).data("href")).show();
+    formSteps[1].classList.add("form-steps-active");
+    formStepsNum = 1;
+});
 
 
 

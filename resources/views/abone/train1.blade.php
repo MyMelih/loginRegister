@@ -6,7 +6,7 @@
 
 
 @section('content')
-    <form action="" class="form mt-5" method="POST">
+    <form action="" class="form mt-5">
         <h2 class="text-center">GıbırNet'e Hoş Geldiniz</h2>
 
         {{-- Progress Bar --}}
@@ -50,7 +50,7 @@
                         </div>
                         <div class="input-group col-6">
                             <label class="gizle">E-Posta</label>
-                            <input type="email" name="mail" id="mail" placeholder="gibirnet@gmail.com"/>
+                            <input type="email" name="email" id="mail" placeholder="gibirnet@gmail.com"/>
                         </div>
                         <div class="input-group col-6">
                             <label class="gizle">Telefon</label>
@@ -159,14 +159,14 @@
                     <div class="row row-cols-2 mobile-abonelik">
                         <div class="input-group col-12">
                             <label class="gizle">Hizmet Numarası</label>
-                            <input type="text" name="hizmetNumarasi" id="hizmetNumarasi" placeholder="Hizmet Numarası" required>
+                            <input type="text" name="hizmetNumarasi" id="hizmetNumarasi" placeholder="Hizmet Numarası">
                         </div>
                         <div class="select-group col-12 mt-3 mb-2">
                             <p class="hizmet-no-bilgi">xDSL hizmet numarası <strong>18</strong> , <strong>88</strong> veya <strong>179</strong> ile başlayan 10 haneli bir numaradır. Farklı sayılarla başlayan numaralar geçiş işlemlerinde geçersiz sayılır ve başvuru işlemleri bu numaralar ile başlatılamaz. Eğer hizmet numaranızı bilmiyorsanız kullanmakta olduğunuz internet servis sağlayıcınızdan bu numarayı öğrenmeniz gerekir.</p>
                         </div>
                         <div class="select-group col-6" id="select-sehir">
                             <label class="tarife-label">Şehir</label>
-                            <select class ="gecis-select" name="sehir" id="sehir" required onchange="changeDesign()">
+                            <select class ="gecis-select" name="sehir" id="sehir" onchange="changeDesign()">
                                 <option value="" selected disabled hidden>Şehir</option>
                                 <option value="Ankara">Ankara</option>
                                 <option value="Konya">Konya</option>
@@ -174,7 +174,7 @@
                         </div>
                         <div class="select-group col-6" id="select-ilce">
                             <label class="tarife-label">İlçe</label>
-                            <select class ="gecis-select" name="ilce" id="ilce" required onchange="changeDesign()">
+                            <select class ="gecis-select" name="ilce" id="ilce" onchange="changeDesign()">
                                 <option value="" selected disabled hidden>İlçe</option>
                                 <option value="Mamak">Mamak</option>
                                 <option value="Kızılay">Kızılay</option>
@@ -182,7 +182,7 @@
                         </div>
                         <div class="select-group col-6" id="select-mahalle">
                             <label class="tarife-label">Mahalle</label>
-                            <select class ="gecis-select" name="mahalle" id="mahalle" required onchange="changeDesign()">
+                            <select class ="gecis-select" name="mahalle" id="mahalle" onchange="changeDesign()">
                                 <option value="" selected disabled hidden>Mahalle</option>
                                 <option value="Alaylar1">Alaylar 1</option>
                                 <option value="Alaylar2">Alaylar 2</option>
@@ -191,7 +191,7 @@
                         </div>
                         <div class="select-group col-6" id="select-sokak">
                             <label class="tarife-label">Cadde/Sokak</label>
-                            <select class ="gecis-select" name="sokak" id="sokak" required onchange="changeDesign()">
+                            <select class ="gecis-select" name="sokak" id="sokak" onchange="changeDesign()">
                                 <option value="" selected disabled hidden>Cadde/Sokak</option>
                                 <option value="MÜ">Mustafa Üstündag</option>
                                 <option value="EA">Eti Alüminyum</option>
@@ -199,7 +199,7 @@
                         </div>
                         <div class="select-group col-6" id="select-diskapino">
                             <label class="tarife-label">Dış Kapı No</label>
-                            <select class ="gecis-select" name="diskapino" id="diskapino" required onchange="changeDesign()">
+                            <select class ="gecis-select" name="diskapino" id="diskapino" onchange="changeDesign()">
                                 <option value="" selected disabled hidden>Dış Kapı No</option>
                                 <option value="17">17</option>
                                 <option value="57">57</option>
@@ -207,7 +207,7 @@
                         </div>
                         <div class="select-group col-6" id="select-ickapino">
                             <label class="tarife-label">İç Kapı No</label>
-                            <select class ="gecis-select" name="ickapino" id="ickapino" required onchange="changeDesign()">
+                            <select class ="gecis-select" name="ickapino" id="ickapino" onchange="changeDesign()">
                                 <option value="" selected disabled hidden>İç Kapı No</option>
                                 <option value="20">20</option>
                                 <option value="4">4</option>
@@ -475,14 +475,14 @@
                 <div class="ozet-form-adress">
                     <div class="ozet-adress">
                         <h5>Adres Bilginiz</h5>
-                        <button class="ozet-adress-btn gizle" >Adress Düzenle <i class="bi bi-pencil-square"></i></button>
+                        <button data-href="#firma-gecis-page" type="button" class="ozet-adress-btn gizle" id="adress-duzenle-buton">Adress Düzenle <i class="bi bi-pencil-square"></i></button>
                     </div>
                     <hr class="gizle">
                     <div class="ozet-adress-tittle">
                         <label>Şeker Mahallesi, Kerbela Sokak, No: 2 / 803, Selçuklu / KONYA</label>
                     </div>
                     <div>
-                        <button class="ozet-adress-btn goster" >Adress Düzenle <i class="bi bi-pencil-square"></i></button>
+                        <button data-href="#firma-gecis-page" class="ozet-adress-btn goster" id="adress-duzenle-buton-mobil">Adress Düzenle <i class="bi bi-pencil-square"></i></button>
                     </div>
                 </div>
                 <hr class="goster">
