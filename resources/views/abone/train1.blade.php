@@ -153,7 +153,7 @@
                 </div>
             </div>
             <div class="tarife-group-pages mt-3">
-                <div class="firma-gecis-page">
+                <div class="firma-gecis-page" id="firma-gecis-page">
                     <h2 class="step-title">Geçiş İşlemleri</h2>
                     <hr>
                     <div class="row row-cols-2 mobile-abonelik">
