@@ -48,6 +48,7 @@ function updateProgressBar() {
 //  Progress Bar Bitiş //
 
 
+
 //? Abone Sayfası Form Yönlendirme Bölümleri //
 
 var bireyselButon = document.getElementById("bireysel");
@@ -68,71 +69,6 @@ kurumsalButon.onclick = function () {
     bireyselForm.style.display = "none";
     firmaForm.style.display = "block";
 }
-
-//? Abone Sayfası Form Yönlendirme Bölümleri //
-
-// İnput içlerindeki değerlerin boş olup olmadığını kontrol eden fonksiyon....
-
-$(document).ready(function () {
-    const aboneControl = {
-        ad: document.getElementById("ad"),
-        soyad: document.getElementById("soyad"),
-        mail: document.getElementById("mail"),
-        telefon: document.getElementById("telefon"),
-        tc: document.getElementById("tc"),
-        dogumtarih: document.getElementById("dogumtarih"),
-        kisiselVeri: document.getElementById("bireyCheckbox"),
-    };
-
-    const aboneButonNext = document.getElementById("abone-buton-next");
-    aboneButonNext.classList.add("disabled");
-
-    Object.values(aboneControl).forEach((input) => {
-        input.addEventListener("input", function () {
-            if (
-                Object.values(aboneControl).every((input) => input.value !== "") &&
-                aboneControl.kisiselVeri.checked
-            ) {
-                aboneButonNext.classList.remove("disabled");
-            } else {
-                aboneButonNext.classList.add("disabled");
-            }
-        });
-    });
-});
-
-// Firma abone formu için input kontrolü
-
-$(document).ready(function () {
-    const firmaAboneControl = {
-        firmaAd: document.getElementById("firmaAdi"),
-        vergiDaire: document.getElementById("vergiDaire"),
-        vergiNo: document.getElementById("vergiNo"),
-        ad: document.getElementById("ad"),
-        soyad: document.getElementById("soyad"),
-        mail: document.getElementById("mail"),
-        telefon: document.getElementById("telefon"),
-        tc: document.getElementById("tc"),
-        dogumtarih: document.getElementById("dogumtarih"),
-        kisiselVeri: document.getElementById("firmaCheckbox"),
-    };
-
-    const firmaAboneButonNext = document.getElementById("firma-buton-next");
-    firmaAboneButonNext.classList.add("disabled");
-
-    Object.values(firmaAboneControl).forEach((input) => {
-        input.addEventListener("input", function () {
-            if (
-                Object.values(firmaAboneControl).every((input) => input.value !== "") &&
-                firmaAboneControl.kisiselVeri.checked
-            ) {
-                firmaAboneButonNext.classList.remove("disabled");
-            } else {
-                firmaAboneButonNext.classList.add("disabled");
-            }
-        });
-    });
-});
 
 //? Select Box Seçme Style
 
@@ -307,10 +243,27 @@ document.getElementById("paket4-3").onclick = function () {
 // Abone Sayfalarına yöneldirme Bölümleri
 $(document).ready(function () {
     $("#bireysel").click(function () {
+        document.getElementById("firmaAdi").value = "";
+        document.getElementById("vergiDaire").value = "";
+        document.getElementById("vergiNo").value = "";
+        document.getElementById("firmaAdi").value = "";
+        document.getElementById("firmaSoyad").value = "";
+        document.getElementById("firmaEmail").value = "";
+        document.getElementById("firmaTelefon").value = "";
+        document.getElementById("firmaTc").value = "";
+        document.getElementById("firmaDogumtarih").value = "";
+        document.getElementById("firmaCheckbox").checked = false;
         $(".abone-second-page").show();
         $(".abone").hide();
     });
     $("#kurumsal").click(function () {
+        document.getElementById("ad").value = "";
+        document.getElementById("soyad").value = "";
+        document.getElementById("mail").value = "";
+        document.getElementById("telefon").value = "";
+        document.getElementById("tc").value = "";
+        document.getElementById("dogumtarih").value = "";
+        document.getElementById("bireyCheckbox").checked = false;
         $(".abone-second-page").show();
         $(".abone").hide();
     });
@@ -323,11 +276,28 @@ $(document).ready(function () {
         $(".abone-second-page").hide();
     });
     $("#abone-buton-next").click(function () {
-        $(".tarife").show();
-        $(".firma-gecis-page").hide();
-        $(".yeni-kurulum-page").hide();
-        $(".gecis-tarife-bilgilendirme").hide();
-        $(".yeni-tarife-bilgilendirme").hide();
+        var ad = document.getElementById("ad").value;
+        var soyad = document.getElementById("soyad").value;
+        var email = document.getElementById("mail").value;
+        var telefon = document.getElementById("telefon").value;
+        var tc = document.getElementById("tc").value;
+        var dogumtarih = document.getElementById("dogumtarih").value;
+        var checkbox = document.getElementById("bireyCheckbox").checked;
+
+        if (ad == "" || soyad == "" || email == "" || telefon == "" || tc == "" || dogumtarih == "" || checkbox == false) {
+            alert("Lütfen tüm alanları doldurunuz.");
+            console.log("Boş alan var: " + ad + soyad + email + telefon + tc + dogumtarih + checkbox);
+        } else {
+            console.log("Boş alan yok :) " + ad + soyad + email + telefon + tc + dogumtarih + checkbox);
+            formStepsNum++;
+            updateProgressBar();
+            updateFormSteps();
+            $(".tarife").show();
+            $(".firma-gecis-page").hide();
+            $(".yeni-kurulum-page").hide();
+            $(".gecis-tarife-bilgilendirme").hide();
+            $(".yeni-tarife-bilgilendirme").hide();
+        }
     })
 });
 
@@ -339,14 +309,35 @@ $(document).ready(function () {
         $(".abone-second-page").hide();
     });
     $("#firma-buton-next").click(function () {
-        $(".tarife").show();
-        $(".firma-gecis-page").hide();
-        $(".yeni-kurulum-page").hide();
-        $(".gecis-tarife-bilgilendirme").hide();
-        $(".yeni-tarife-bilgilendirme").hide();
+        var firmaAdi = document.getElementById("firmaAdi").value;
+        var vergiDaire = document.getElementById("vergiDaire").value;
+        var vergiNo = document.getElementById("vergiNo").value;
+        var firmaAd = document.getElementById("firmaAd").value;
+        var firmaSoyad = document.getElementById("firmaSoyad").value;
+        var firmaEmail = document.getElementById("firmaEmail").value;
+        var firmaTelefon = document.getElementById("firmaTelefon").value;
+        var firmaTc = document.getElementById("firmaTc").value;
+        var firmaDogumtarih = document.getElementById("firmaDogumtarih").value;
+        var firmaCheckbox = document.getElementById("firmaCheckbox").checked;
+
+        if (firmaAdi == "" || vergiDaire == "" || vergiNo == "" || firmaAd == "" || firmaSoyad == "" || firmaEmail == "" || firmaTelefon == "" || firmaTc == "" || firmaDogumtarih == "" || firmaCheckbox == false) {
+            alert("Lütfen tüm alanları doldurunuz.");
+            console.log("Boş alan var." + firmaAdi + vergiDaire + vergiNo + firmaAd + firmaSoyad + firmaEmail + firmaTelefon + firmaTc + firmaDogumtarih + firmaCheckbox)
+        } else {
+            console.log("Boş alan yok." + firmaAdi + vergiDaire + vergiNo + firmaAd + firmaSoyad + firmaEmail + firmaTelefon + firmaTc + firmaDogumtarih + firmaCheckbox);
+            formStepsNum++;
+            updateProgressBar();
+            updateFormSteps();
+            $(".tarife").show();
+            $(".firma-gecis-page").hide();
+            $(".yeni-kurulum-page").hide();
+            $(".gecis-tarife-bilgilendirme").hide();
+            $(".yeni-tarife-bilgilendirme").hide();
+        }
     });
 });
 
+// Yeni Kurulum ve Firma Geçişleri
 $(document).ready(function () {
     $("#internetVar").click(function () {
         $(".firma-gecis-page").show();
@@ -361,14 +352,34 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#gecis-buton-prev").click(function () {
+        document.getElementById("hizmetNumarasi").value = "";
+        document.getElementById("sehir").value = "";
+        document.getElementById("ilce").value = "";
+        document.getElementById("mahalle").value = "";
+        document.getElementById("sokak").value = "";
+        document.getElementById("diskapino").value = "";
+        document.getElementById("ickapino").value = "";
         $(".firma-gecis-page").hide();
         $(".tarife").show();
     });
     $("#gecis-buton-next").click(function () {
-        $(".firma-gecis-page").hide();
-        $(".gecis-tarife-bilgilendirme").show();
+        var hizmetNumarasi = document.getElementById("hizmetNumarasi").value;
+        if (hizmetNumarasi == "") {
+            alert("Lütfen hizmet numarasını giriniz.");
+            console.log("Boş alan var." + hizmetNumarasi);
+        } else {
+            console.log("Boş alan yok." + hizmetNumarasi);
+            $(".firma-gecis-page").hide();
+            $(".gecis-tarife-bilgilendirme").show();
+        }
     });
     $("#yeni-buton-prev").click(function () {
+        document.getElementById("yk-sehir").value = "";
+        document.getElementById("yk-ilce").value = "";
+        document.getElementById("yk-mahalle").value = "";
+        document.getElementById("yk-sokak").value = "";
+        document.getElementById("yk-diskapino").value = "";
+        document.getElementById("yk-ickapino").value = "";
         $(".yeni-kurulum-page").hide();
         $(".tarife").show();
     });
