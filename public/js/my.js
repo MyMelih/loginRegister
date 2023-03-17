@@ -270,19 +270,93 @@ $(document).ready(function () {
         $(".abone-second-page").hide();
     });
     $("#abone-buton-next").click(function () {
-        var ad = document.getElementById("ad").value;
-        var soyad = document.getElementById("soyad").value;
-        var email = document.getElementById("mail").value;
-        var telefon = document.getElementById("telefon").value;
-        var tc = document.getElementById("tc").value;
-        var dogumtarih = document.getElementById("dogumtarih").value;
-        var checkbox = document.getElementById("bireyCheckbox").checked;
+        var fields = [
+            document.getElementById("ad"),
+            document.getElementById("soyad"),
+            document.getElementById("mail"),
+            document.getElementById("telefon"),
+            document.getElementById("tc"),
+            document.getElementById("dogumtarih")
+        ]
 
-        if (ad == "" || soyad == "" || email == "" || telefon == "" || tc == "" || dogumtarih == "" || checkbox == false) {
-            alert("Lütfen tüm alanları doldurunuz.");
-            console.log("Boş alan var: " + ad + soyad + email + telefon + tc + dogumtarih + checkbox);
+        var checkbox = document.getElementById("bireyCheckbox");
+        var formValid = true;
+
+        fields.forEach(function (field) {
+            if (field.value === "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Ooops..',
+                    text: 'Lütfen Tüm Kutucukları Doldurunuz!',
+                });
+                formValid = false;
+                field.style.borderColor = "red";
+                field.style.borderWidth = "2px";
+            } else {
+                field.style.borderColor = "";
+            }
+
+            //? Mail Kontrolü
+            if (field.id === "mail") {
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(field.value)) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Ooops..',
+                        text: 'Lütfen Geçerli Bir E-Posta Adresi Giriniz!',
+                    });
+                    formValid = false;
+                    field.style.borderColor = "red";
+                    field.style.borderWidth = "2px";
+                } else {
+                    field.style.borderColor = "";
+                }
+            }
+
+            //todo: Tc Kontrolü
+            if (field.id === "tc") {
+                var tcNo = field.value;
+                if (tcNo.length != 11) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Ooops..',
+                        text: 'Lütfen 11 Haneli Tc Kimlik Numaranızı Giriş Yapınız!',
+                    })
+                    formValid = false;
+                    field.style.borderColor = "red";
+                    field.style.borderWidth = "2px";
+                } else {
+                    field.style.borderColor = "";
+                }
+            }
+
+            //? Telefon Kontrolü
+            if (field.id === "telefon") {
+                var telefonNo = field.value;
+                if (telefonNo.length <= 9 || telefonNo.length >= 11) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Ooops..',
+                        text: 'Lütfen 10 Haneli Telefon Numaranızı Giriş Yapınız!',
+                    });
+                    formValid = false;
+                    field.style.borderColor = "red";
+                    field.style.borderWidth = "2px";
+                } else {
+                    field.style.borderColor = "";
+                }
+            }
+        });
+
+        if (checkbox.checked === false) {
+            formValid = false;
+            checkbox.style.borderColor = "red";
+            checkbox.style.borderWidth = "2px";
         } else {
-            console.log("Boş alan yok :) " + ad + soyad + email + telefon + tc + dogumtarih + checkbox);
+            checkbox.style.borderColor = "";
+        }
+
+        if (formValid) {
             formStepsNum++;
             updateProgressBar();
             updateFormSteps();
@@ -321,6 +395,11 @@ $(document).ready(function () {
 
         fields.forEach(function (field) {
             if (field.value === "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Ooops..',
+                    text: 'Lütfen Tüm Kutucuları Doldurun!',
+                })
                 formValid = false;
                 field.style.borderColor = "red";
                 field.style.borderWidth = "2px";
@@ -332,6 +411,11 @@ $(document).ready(function () {
             if (field.id === "firmaEmail") {
                 var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(field.value)) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Ooops..',
+                        text: 'Lütfen Geçerli Bir E-Posta Adresi Giriniz!',
+                    })
                     formValid = false;
                     field.style.borderColor = "red";
                     field.style.borderWidth = "2px";
@@ -343,9 +427,15 @@ $(document).ready(function () {
             if (field.id === "firmaTc") {
                 var tcNo = field.value;
                 if (tcNo.length != 11) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Ooops..',
+                        text: 'Lütfen 11 Haneli Tc Kimlik Numaranızı Giriş Yapınız!',
+                    })
                     formValid = false;
                     field.style.borderColor = "red";
                     field.style.borderWidth = "2px";
+                    return 0;
                 } else {
                     field.style.borderColor = "";
                 }
@@ -354,10 +444,16 @@ $(document).ready(function () {
             // Telefon kontrolü
             if (field.id === "firmaTelefon") {
                 var telefonNo = field.value;
-                if (telefonNo.length <= 9) {
+                if (telefonNo.length <= 9 || telefonNo >= 11) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Ooops..',
+                        text: 'Lütfen 10 Haneli Telefon Numaranızı Giriş Yapınız!',
+                    })
                     formValid = false;
                     field.style.borderColor = "red";
                     field.style.borderWidth = "2px";
+                    return 0;
                 } else {
                     field.style.borderColor = "";
                 }
@@ -383,123 +479,6 @@ $(document).ready(function () {
             $(".yeni-tarife-bilgilendirme").hide();
         }
     });
-
-
-    // $("#firma-buton-next").click(function () {
-    //     var firmaAdi = document.getElementById("firmaAdi");
-    //     var vergiDaire = document.getElementById("vergiDaire");
-    //     var vergiNo = document.getElementById("vergiNo");
-    //     var firmaAd = document.getElementById("firmaAd");
-    //     var firmaSoyad = document.getElementById("firmaSoyad");
-    //     var firmaEmail = document.getElementById("firmaEmail");
-    //     var firmaTelefon = document.getElementById("firmaTelefon");
-    //     var firmaTc = document.getElementById("firmaTc");
-    //     var firmaDogumtarih = document.getElementById("firmaDogumtarih");
-    //     var firmaCheckbox = document.getElementById("firmaCheckbox");
-
-    //     var formValid = true;
-
-    //     // firmaAdi alanının dolu olup olmadığını kontrol et
-    //     if (firmaAdi.value === "") {
-    //         formValid = false;
-    //         firmaAdi.style.borderColor = "red";
-    //         firmaAdi.style.borderWidth = "2px";
-    //     } else {
-    //         firmaAdi.style.borderColor = "";
-    //     }
-
-    //     // vergiDaire alanının dolu olup olmadığını kontrol et
-    //     if (vergiDaire.value === "") {
-    //         formValid = false;
-    //         vergiDaire.style.borderColor = "red";
-    //         vergiDaire.style.borderWidth = "2px";
-    //     } else {
-    //         vergiDaire.style.borderColor = "";
-    //     }
-
-    //     // vergiNo alanının dolu olup olmadığını kontrol et
-    //     if (vergiNo.value === "") {
-    //         formValid = false;
-    //         vergiNo.style.borderColor = "red";
-    //         vergiNo.style.borderWidth = "2px";
-    //     } else {
-    //         vergiNo.style.borderColor = "";
-    //     }
-
-    //     // firmaAd alanının dolu olup olmadığını kontrol et
-    //     if (firmaAd.value === "") {
-    //         formValid = false;
-    //         firmaAd.style.borderColor = "red";
-    //         firmaAd.style.borderWidth = "2px";
-    //     } else {
-    //         firmaAd.style.borderColor = "";
-    //     }
-
-    //     // firmaSoyad alanının dolu olup olmadığını kontrol et
-    //     if (firmaSoyad.value === "") {
-    //         formValid = false;
-    //         firmaSoyad.style.borderColor = "red";
-    //         firmaSoyad.style.borderWidth = "2px";
-    //     } else {
-    //         firmaSoyad.style.borderColor = "";
-    //     }
-
-    //     // firmaEmail alanının dolu olup olmadığını kontrol et
-    //     if (firmaEmail.value === "") {
-    //         formValid = false;
-    //         firmaEmail.style.borderColor = "red";
-    //         firmaEmail.style.borderWidth = "2px";
-    //     } else {
-    //         firmaEmail.style.borderColor = "";
-    //     }
-
-    //     // firmaTelefon alanının dolu olup olmadığını kontrol et
-    //     if (firmaTelefon.value === "") {
-    //         formValid = false;
-    //         firmaTelefon.style.borderColor = "red";
-    //         firmaTelefon.style.borderWidth = "2px";
-    //     } else {
-    //         firmaTelefon.style.borderColor = "";
-    //     }
-
-    //     // firmaTc alanının dolu olup olmadığını kontrol et
-    //     if (firmaTc.value === "") {
-    //         formValid = false;
-    //         firmaTc.style.borderColor = "red";
-    //         firmaTc.style.borderWidth = "2px";
-    //     } else {
-    //         firmaTc.style.borderColor = "";
-    //     }
-
-    //     // firmaDogumtarih alanının dolu olup olmadığını kontrol et
-    //     if (firmaDogumtarih.value === "") {
-    //         formValid = false;
-    //         firmaDogumtarih.style.borderColor = "red";
-    //         firmaDogumtarih.style.borderWidth = "2px";
-    //     } else {
-    //         firmaDogumtarih.style.borderColor = "";
-    //     }
-
-    //     // firmaCheckbox alanının dolu olup olmadığını kontrol et
-    //     if (firmaCheckbox.checked === false) {
-    //         formValid = false;
-    //         firmaCheckbox.style.borderColor = "red";
-    //         firmaCheckbox.style.borderWidth = "2px";
-    //     } else {
-    //         firmaCheckbox.style.borderColor = "";
-    //     }
-
-    //     if (formValid) {
-    //         formStepsNum++;
-    //         updateProgressBar();
-    //         updateFormSteps();
-    //         $(".tarife").show();
-    //         $(".firma-gecis-page").hide();
-    //         $(".yeni-kurulum-page").hide();
-    //         $(".gecis-tarife-bilgilendirme").hide();
-    //         $(".yeni-tarife-bilgilendirme").hide();
-    //     }
-    // });
 });
 
 
@@ -537,7 +516,7 @@ $(document).ready(function () {
         if (hizmetNumarasi == "") {
             Swal.fire({
                 icon: 'error',
-                title: 'Oops...',
+                title: 'Ooops..',
                 text: 'Lütfen Hizmet Numaranızı Girin!',
             })
             console.log("Boş alan var." + hizmetNumarasi);
