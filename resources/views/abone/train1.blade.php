@@ -6,7 +6,7 @@
 
 
 @section('content')
-    <form action="" class="form mt-5">
+    <form action="" class="form mt-5" >
         <h2 class="text-center">GıbırNet'e Hoş Geldiniz</h2>
 
         {{-- Progress Bar --}}
@@ -20,7 +20,7 @@
         </div>
 
         {{-- Steps --}}
-        <div class="form-step form-step-active">
+        <div class="form-step form-step-active" id="step-iletisim">
             <div class="abone mt-5">
                 <h2 class="step-title">Abonelik Tipini Seçiniz</h2>
                 <hr class="gizle">
@@ -136,7 +136,7 @@
                 </div>
             </div>
         </div>
-        <div class="form-step">
+        <div class="form-step" id="step-kurulum">
             <div class="tarife">
                 <h2 class="step-title mobile-s-t">Abonelik Başvuru Tipini Seçiniz</h2>
                 <hr>
@@ -152,195 +152,201 @@
                     <a href="#" class="btn btn-prev">Geri</a>
                 </div>
             </div>
-            <div class="tarife-group-pages mt-3">
-                <div class="firma-gecis-page" id="firma-gecis-page">
-                    <h2 class="step-title">Geçiş İşlemleri</h2>
-                    <hr>
-                    <div class="row row-cols-2 mobile-abonelik">
-                        <div class="input-group col-12">
-                            <label class="gizle">Hizmet Numarası</label>
-                            <input type="text" name="hizmetNumarasi" id="hizmetNumarasi" placeholder="Hizmet Numarası">
+            <div class="tarife-group-pages mt-3" id="tarife-group-pages">
+                <div class="adress-ogrenme">
+                    <div class="firma-gecis-page" id="firma-gecis-page">
+                        <h2 class="step-title">Geçiş İşlemleri</h2>
+                        <hr>
+                        <div class="row row-cols-2 mobile-abonelik">
+                            <div class="input-group col-12">
+                                <label class="gizle">Hizmet Numarası</label>
+                                <input type="text" name="hizmetNumarasi" id="hizmetNumarasi" placeholder="Hizmet Numarası">
+                            </div>
+                            <div class="select-group col-12 mt-3 mb-2">
+                                <p class="hizmet-no-bilgi">xDSL hizmet numarası <strong>18</strong> , <strong>88</strong> veya <strong>179</strong> ile başlayan 10 haneli bir numaradır. Farklı sayılarla başlayan numaralar geçiş işlemlerinde geçersiz sayılır ve başvuru işlemleri bu numaralar ile başlatılamaz. Eğer hizmet numaranızı bilmiyorsanız kullanmakta olduğunuz internet servis sağlayıcınızdan bu numarayı öğrenmeniz gerekir.</p>
+                            </div>
+                            <div class="select-group col-6" id="select-sehir">
+                                <label class="tarife-label">Şehir</label>
+                                <select class ="gecis-select" name="sehir" id="sehir" onchange="changeDesign()">
+                                    <option value="" selected disabled hidden>Şehir</option>
+                                    <option value="Ankara">Ankara</option>
+                                    <option value="Konya">Konya</option>
+                                </select>
+                            </div>
+                            <div class="select-group col-6" id="select-ilce">
+                                <label class="tarife-label">İlçe</label>
+                                <select class ="gecis-select" name="ilce" id="ilce" onchange="changeDesign()">
+                                    <option value="" selected disabled hidden>İlçe</option>
+                                    <option value="Mamak">Mamak</option>
+                                    <option value="Kızılay">Kızılay</option>
+                                </select>
+                            </div>
+                            <div class="select-group col-6" id="select-mahalle">
+                                <label class="tarife-label">Mahalle</label>
+                                <select class ="gecis-select" name="mahalle" id="mahalle" onchange="changeDesign()">
+                                    <option value="" selected disabled hidden>Mahalle</option>
+                                    <option value="Alaylar1">Alaylar 1</option>
+                                    <option value="Alaylar2">Alaylar 2</option>
+                                    <option value="Alaylar3">Alaylar 3</option>
+                                </select>
+                            </div>
+                            <div class="select-group col-6" id="select-sokak">
+                                <label class="tarife-label">Cadde/Sokak</label>
+                                <select class ="gecis-select" name="sokak" id="sokak" onchange="changeDesign()">
+                                    <option value="" selected disabled hidden>Cadde/Sokak</option>
+                                    <option value="MÜ">Mustafa Üstündag</option>
+                                    <option value="EA">Eti Alüminyum</option>
+                                </select>
+                            </div>
+                            <div class="select-group col-6" id="select-diskapino">
+                                <label class="tarife-label">Dış Kapı No</label>
+                                <select class ="gecis-select" name="diskapino" id="diskapino" onchange="changeDesign()">
+                                    <option value="" selected disabled hidden>Dış Kapı No</option>
+                                    <option value="17">17</option>
+                                    <option value="57">57</option>
+                                </select>
+                            </div>
+                            <div class="select-group col-6" id="select-ickapino">
+                                <label class="tarife-label">İç Kapı No</label>
+                                <select class ="gecis-select" name="ickapino" id="ickapino" onchange="changeDesign()">
+                                    <option value="" selected disabled hidden>İç Kapı No</option>
+                                    <option value="20">20</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="select-group col-12 mt-3 mb-2">
-                            <p class="hizmet-no-bilgi">xDSL hizmet numarası <strong>18</strong> , <strong>88</strong> veya <strong>179</strong> ile başlayan 10 haneli bir numaradır. Farklı sayılarla başlayan numaralar geçiş işlemlerinde geçersiz sayılır ve başvuru işlemleri bu numaralar ile başlatılamaz. Eğer hizmet numaranızı bilmiyorsanız kullanmakta olduğunuz internet servis sağlayıcınızdan bu numarayı öğrenmeniz gerekir.</p>
-                        </div>
-                        <div class="select-group col-6" id="select-sehir">
-                            <label class="tarife-label">Şehir</label>
-                            <select class ="gecis-select" name="sehir" id="sehir" onchange="changeDesign()">
-                                <option value="" selected disabled hidden>Şehir</option>
-                                <option value="Ankara">Ankara</option>
-                                <option value="Konya">Konya</option>
-                            </select>
-                        </div>
-                        <div class="select-group col-6" id="select-ilce">
-                            <label class="tarife-label">İlçe</label>
-                            <select class ="gecis-select" name="ilce" id="ilce" onchange="changeDesign()">
-                                <option value="" selected disabled hidden>İlçe</option>
-                                <option value="Mamak">Mamak</option>
-                                <option value="Kızılay">Kızılay</option>
-                            </select>
-                        </div>
-                        <div class="select-group col-6" id="select-mahalle">
-                            <label class="tarife-label">Mahalle</label>
-                            <select class ="gecis-select" name="mahalle" id="mahalle" onchange="changeDesign()">
-                                <option value="" selected disabled hidden>Mahalle</option>
-                                <option value="Alaylar1">Alaylar 1</option>
-                                <option value="Alaylar2">Alaylar 2</option>
-                                <option value="Alaylar3">Alaylar 3</option>
-                            </select>
-                        </div>
-                        <div class="select-group col-6" id="select-sokak">
-                            <label class="tarife-label">Cadde/Sokak</label>
-                            <select class ="gecis-select" name="sokak" id="sokak" onchange="changeDesign()">
-                                <option value="" selected disabled hidden>Cadde/Sokak</option>
-                                <option value="MÜ">Mustafa Üstündag</option>
-                                <option value="EA">Eti Alüminyum</option>
-                            </select>
-                        </div>
-                        <div class="select-group col-6" id="select-diskapino">
-                            <label class="tarife-label">Dış Kapı No</label>
-                            <select class ="gecis-select" name="diskapino" id="diskapino" onchange="changeDesign()">
-                                <option value="" selected disabled hidden>Dış Kapı No</option>
-                                <option value="17">17</option>
-                                <option value="57">57</option>
-                            </select>
-                        </div>
-                        <div class="select-group col-6" id="select-ickapino">
-                            <label class="tarife-label">İç Kapı No</label>
-                            <select class ="gecis-select" name="ickapino" id="ickapino" onchange="changeDesign()">
-                                <option value="" selected disabled hidden>İç Kapı No</option>
-                                <option value="20">20</option>
-                                <option value="4">4</option>
-                            </select>
+                        <div class="btns-group mt-5">
+                            <a href="#" class="btn" id="gecis-buton-prev">Önceki</a>
+                            <a href="#" class="btn" id="gecis-buton-next">Sonraki</a>
                         </div>
                     </div>
-                    <div class="btns-group mt-5">
-                        <a href="#" class="btn" id="gecis-buton-prev">Önceki</a>
-                        <a href="#" class="btn" id="gecis-buton-next">Sonraki</a>
+                    <div class="yeni-kurulum-page" id="yeni-kurulum-page">
+                        <h2 class="step-title">Yeni Kurulum</h2>
+                        <hr>
+                        <div class="row row-cols-2 mobile-abonelik">
+                            <div class="select-group col-6" id="select-yk-sehir">
+                                <label class="tarife-label">Şehir</label>
+                                <select class ="gecis-select" name="yk-sehir" id="yk-sehir" onchange="changeDesign()">
+                                    <option value="" selected disabled hidden>Şehir</option>
+                                    <option value="a">Ankara</option>
+                                    <option value="k">Konya</option>
+                                </select>
+                            </div>
+                            <div class="select-group col-6" id="select-yk-ilce">
+                                <label class="tarife-label">İlçe</label>
+                                <select class ="gecis-select" name="yk-ilce" id="yk-ilce" onchange="changeDesign()">
+                                    <option value="" selected disabled hidden>İlçe</option>
+                                    <option value="m">Mamak</option>
+                                    <option value="k">Kızılay</option>
+                                </select>
+                            </div>
+                            <div class="select-group col-6" id="select-yk-mahalle">
+                                <label class="tarife-label">Mahalle</label>
+                                <select class ="gecis-select" name="yk-mahalle" id="yk-mahalle" onchange="changeDesign('yk-mahalle')">
+                                    <option value="" selected disabled hidden>Mahalle</option>
+                                    <option value="b">Alaylar 1</option>
+                                    <option value="b">Alaylar 2</option>
+                                    <option value="b">Alaylar 3</option>
+                                </select>
+                            </div>
+                            <div class="select-group col-6" id="select-yk-sokak">
+                                <label class="tarife-label">Cadde/Sokak</label>
+                                <select class ="gecis-select" name="yk-sokak" id="yk-sokak" onchange="changeDesign()">
+                                    <option value="" selected disabled hidden>Cadde/Sokak</option>
+                                    <option value="a">Mustafa Üstündag</option>
+                                    <option value="a">Eti Alüminyum</option>
+                                </select>
+                            </div>
+                            <div class="select-group col-6" id="select-yk-diskapino">
+                                <label class="tarife-label">Dış Kapı No</label>
+                                <select class ="gecis-select" name="yk-diskapino" id="yk-diskapino" onchange="changeDesign()">
+                                    <option value="" selected disabled hidden>Dış Kapı No</option>
+                                    <option value="17">17</option>
+                                    <option value="57">57</option>
+                                </select>
+                            </div>
+                            <div class="select-group col-6" id="select-yk-ickapino">
+                                <label class="tarife-label">İç Kapı No</label>
+                                <select class ="gecis-select" name="yk-ickapino" id="yk-ickapino" onchange="changeDesign()">
+                                    <option value="" selected disabled hidden>İç Kapı No</option>
+                                    <option value="20">20</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btns-group mt-5">
+                            <a href="#" class="btn" id="yeni-buton-prev">Önceki</a>
+                            <a href="#" class="btn" id="yeni-buton-next">Sonraki</a>
+                        </div>
                     </div>
                 </div>
-                <div class="yeni-kurulum-page">
-                    <h2 class="step-title">Yeni Kurulum</h2>
-                    <hr>
-                    <div class="row row-cols-2 mobile-abonelik">
-                        <div class="select-group col-6" id="select-yk-sehir">
-                            <label class="tarife-label">Şehir</label>
-                            <select class ="gecis-select" name="yk-sehir" id="yk-sehir" onchange="changeDesign()">
-                                <option value="" selected disabled hidden>Şehir</option>
-                                <option value="a">Ankara</option>
-                                <option value="k">Konya</option>
-                            </select>
-                        </div>
-                        <div class="select-group col-6" id="select-yk-ilce">
-                            <label class="tarife-label">İlçe</label>
-                            <select class ="gecis-select" name="yk-ilce" id="yk-ilce" onchange="changeDesign()">
-                                <option value="" selected disabled hidden>İlçe</option>
-                                <option value="m">Mamak</option>
-                                <option value="k">Kızılay</option>
-                            </select>
-                        </div>
-                        <div class="select-group col-6" id="select-yk-mahalle">
-                            <label class="tarife-label">Mahalle</label>
-                            <select class ="gecis-select" name="yk-mahalle" id="yk-mahalle" onchange="changeDesign('yk-mahalle')">
-                                <option value="" selected disabled hidden>Mahalle</option>
-                                <option value="b">Alaylar 1</option>
-                                <option value="b">Alaylar 2</option>
-                                <option value="b">Alaylar 3</option>
-                            </select>
-                        </div>
-                        <div class="select-group col-6" id="select-yk-sokak">
-                            <label class="tarife-label">Cadde/Sokak</label>
-                            <select class ="gecis-select" name="yk-sokak" id="yk-sokak" onchange="changeDesign()">
-                                <option value="" selected disabled hidden>Cadde/Sokak</option>
-                                <option value="a">Mustafa Üstündag</option>
-                                <option value="a">Eti Alüminyum</option>
-                            </select>
-                        </div>
-                        <div class="select-group col-6" id="select-yk-diskapino">
-                            <label class="tarife-label">Dış Kapı No</label>
-                            <select class ="gecis-select" name="yk-diskapino" id="yk-diskapino" onchange="changeDesign()">
-                                <option value="" selected disabled hidden>Dış Kapı No</option>
-                                <option value="17">17</option>
-                                <option value="57">57</option>
-                            </select>
-                        </div>
-                        <div class="select-group col-6" id="select-yk-ickapino">
-                            <label class="tarife-label">İç Kapı No</label>
-                            <select class ="gecis-select" name="yk-ickapino" id="yk-ickapino" onchange="changeDesign()">
-                                <option value="" selected disabled hidden>İç Kapı No</option>
-                                <option value="20">20</option>
-                                <option value="4">4</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="btns-group mt-5">
-                        <a href="#" class="btn" id="yeni-buton-prev">Önceki</a>
-                        <a href="#" class="btn" id="yeni-buton-next">Sonraki</a>
-                    </div>
-                </div>
-                <div class="gecis-tarife-bilgilendirme mt-3 row">
-                    <h2 class="step-title col-12 altyapı-sorgu">İnternet Alt Yapı Sorgulama Sonucunuz</h2>
-                    <hr class="gizle">
-                    <div class="bilgilendirme-page mt-3 mb-3">
-                        <div class="sonuc-boxs">
-                            <label class="hiz-sonuc">60 Mbps</label>
-                        </div>
-                        <div class="sonuc-groups">
-                            <label class="sonuc-label">BBK Kodu</label>
-                            <label class="sonuc-label">24681002</label>
-                        </div>
-                        <div class="sonuc-groups">
-                            <label class="sonuc-label">Boş Port</label>
-                            <label class="sonuc-label">VAR</label>
-                        </div>
-                        <div class="sonuc-groups">
-                            <label class="sonuc-label">Altyapı Türü</label>
-                            <label class="sonuc-label1">VDSL2</label>
-                        </div>
-                        <div class="sonuc-groups">
-                            <label class="sonuc-label">Santral Mesafe</label>
-                            <label class="sonuc-label">240 Metre</label>
-                        </div>
+                <div class="hiz-ogrenme">
+                    <div class="gecis-tarife-bilgilendirme mt-3 row" id="gecis-tarife-bilgilendirme">
+                        <h2 class="step-title col-12 altyapı-sorgu">İnternet Alt Yapı Sorgulama Sonucunuz</h2>
+                        <hr class="gizle">
+                        <div class="bilgilendirme-page mt-3 mb-3">
+                            <div class="sonuc-boxs">
+                                <label class="hiz-sonuc">60 Mbps</label>
+                            </div>
+                            <div class="sonuc-groups">
+                                <label class="sonuc-label">BBK Kodu</label>
+                                <label class="sonuc-label">24681002</label>
+                            </div>
+                            <div class="sonuc-groups">
+                                <label class="sonuc-label">Boş Port</label>
+                                <label class="sonuc-label">VAR</label>
+                            </div>
+                            <div class="sonuc-groups">
+                                <label class="sonuc-label">Altyapı Türü</label>
+                                <label class="sonuc-label1">VDSL2</label>
+                            </div>
+                            <div class="sonuc-groups">
+                                <label class="sonuc-label">Santral Mesafe</label>
+                                <label class="sonuc-label">240 Metre</label>
+                            </div>
 
+                        </div>
+                        <div class="btns-group mt-5 ">
+                            <a href="#" class="btn" id="bilgi-gecis-buton-prev">Önceki</a>
+                            <a href="#" class="btn btn-next" id="bilgi-gecis-buton-next">Sonraki</a>
+                        </div>
                     </div>
-                    <div class="btns-group mt-5 ">
-                        <a href="#" class="btn" id="bilgi-gecis-buton-prev">Önceki</a>
-                        <a href="#" class="btn btn-next" id="bilgi-gecis-buton-next">Sonraki</a>
-                    </div>
-                </div>
-                <div class="yeni-tarife-bilgilendirme mt-3 row">
-                    <h2 class="step-title col-12 altyapı-sorgu">İnternet Alt Yapı Sorgulama Sonucunuz</h2>
-                    <hr class="gizle">
-                    <div class="bilgilendirme-page mt-3 mb-3">
-                        <div class="sonuc-boxs">
-                            <label class="hiz-sonuc">60 Mbps</label>
-                        </div>
-                        <div class="sonuc-groups">
-                            <label class="sonuc-label">BBK Kodu</label>
-                            <label class="sonuc-label">24681002</label>
-                        </div>
-                        <div class="sonuc-groups">
-                            <label class="sonuc-label">Boş Port</label>
-                            <label class="sonuc-label">VAR</label>
-                        </div>
-                        <div class="sonuc-groups">
-                            <label class="sonuc-label">Altyapı Türü</label>
-                            <label class="sonuc-label1">VDSL2</label>
-                        </div>
-                        <div class="sonuc-groups">
-                            <label class="sonuc-label">Santral Mesafe</label>
-                            <label class="sonuc-label">240 Metre</label>
-                        </div>
+                    <div class="yeni-tarife-bilgilendirme mt-3 row"
+                    id="yeni-tarife-bilgilendirme">
+                        <h2 class="step-title col-12 altyapı-sorgu">İnternet Alt Yapı Sorgulama Sonucunuz</h2>
+                        <hr class="gizle">
+                        <div class="bilgilendirme-page mt-3 mb-3">
+                            <div class="sonuc-boxs">
+                                <label class="hiz-sonuc">60 Mbps</label>
+                            </div>
+                            <div class="sonuc-groups">
+                                <label class="sonuc-label">BBK Kodu</label>
+                                <label class="sonuc-label">24681002</label>
+                            </div>
+                            <div class="sonuc-groups">
+                                <label class="sonuc-label">Boş Port</label>
+                                <label class="sonuc-label">VAR</label>
+                            </div>
+                            <div class="sonuc-groups">
+                                <label class="sonuc-label">Altyapı Türü</label>
+                                <label class="sonuc-label1">VDSL2</label>
+                            </div>
+                            <div class="sonuc-groups">
+                                <label class="sonuc-label">Santral Mesafe</label>
+                                <label class="sonuc-label">240 Metre</label>
+                            </div>
 
-                    </div>
-                    <div class="btns-group mt-5">
-                        <a href="#" class="btn" id="bilgi-yeni-buton-prev">Önceki</a>
-                        <a href="#" class="btn btn-next" id="bilgi-yeni-buton-next">Sonraki</a>
+                        </div>
+                        <div class="btns-group mt-5">
+                            <a href="#" class="btn" id="bilgi-yeni-buton-prev">Önceki</a>
+                            <a href="#" class="btn btn-next" id="bilgi-yeni-buton-next">Sonraki</a>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
-        <div class="form-step">
+        <div class="form-step" id="step-paket">
             <h2 class="step-title gizle">Paket Tipini Seçiniz</h2>
             <hr class="gizle">
             <div class="paketler">
@@ -456,7 +462,7 @@
                 </div>
             </div>
         </div>
-        <div class="form-step">
+        <div class="form-step" id="step-ozet">
             <div class="mobile-ozet-page">
                 <hr class="goster">
                 <div class="ozet-form">
@@ -489,7 +495,7 @@
                 <div class="ozet-form-paket">
                     <div class="ozet-paket">
                         <h5>Tercihleriniz</h5>
-                        <button class="ozet-paket-buton gizle">Tercih Düzenle <i class="bi bi-pencil-square"></i></button>
+                        <button class="ozet-paket-buton gizle" id="ozet-paket-buton">Tercih Düzenle <i class="bi bi-pencil-square"></i></button>
                     </div>
                     <hr>
                     <div class="ozet-paket-aciklama">
@@ -505,7 +511,8 @@
                             </ul>
                         </div>
                         <div class="goster">
-                            <button class="ozet-paket-buton goster">Tercih Düzenle<i class="bi bi-pencil-square"></i></button>
+                            <button
+                            class="ozet-paket-buton-mobil goster" id="ozet-paket-buton-mobil">Tercih Düzenle<i class="bi bi-pencil-square"></i></button>
                         </div>
                         <hr class="goster">
                         <h5 class="ozet-guvenlik-profil goster">Güvenli İnternet Profilini Seçin</h5>
@@ -543,10 +550,10 @@
             </div>
         </div>
     </form>
-
 @endsection
 
 @section('js')
+
 <script src="{{ asset('js/my.js') }}"></script>
 
 

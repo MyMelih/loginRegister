@@ -204,7 +204,7 @@ input[type="checkbox"]:checked:before {
 }
 
 .form-step {
-    display: none;
+    display: none !important;
     transform-origin: top;
     animation: animate 0.75s;
 }
@@ -281,7 +281,7 @@ input[type="checkbox"]:checked:before {
 
 
 .form-step-active {
-    display: block;
+    display: block !important;
 }
 
 .input-group {
