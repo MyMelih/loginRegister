@@ -495,7 +495,7 @@
                 <div class="ozet-form-paket">
                     <div class="ozet-paket">
                         <h5>Tercihleriniz</h5>
-                        <button class="ozet-paket-buton gizle" id="ozet-paket-buton">Tercih Düzenle <i class="bi bi-pencil-square"></i></button>
+                        <button data-href="#step-paket" type="button" class="ozet-paket-buton gizle" id="ozet-paket-buton">Tercih Düzenle <i class="bi bi-pencil-square"></i></button>
                     </div>
                     <hr>
                     <div class="ozet-paket-aciklama">
@@ -511,7 +511,7 @@
                             </ul>
                         </div>
                         <div class="goster">
-                            <button
+                            <button type="button" data-href="#step-paket"
                             class="ozet-paket-buton-mobil goster" id="ozet-paket-buton-mobil">Tercih Düzenle<i class="bi bi-pencil-square"></i></button>
                         </div>
                         <hr class="goster">

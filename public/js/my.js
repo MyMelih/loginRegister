@@ -444,7 +444,7 @@ $(document).ready(function () {
             // Telefon kontrolü
             if (field.id === "firmaTelefon") {
                 var telefonNo = field.value;
-                if (telefonNo.length <= 9 || telefonNo >= 11) {
+                if (telefonNo.length <= 9 || telefonNo.length >= 11) {
                     Swal.fire({
                         icon: 'error',
                         title: 'Ooops..',
@@ -511,6 +511,7 @@ $(document).ready(function () {
         $(".firma-gecis-page").hide();
         $(".tarife").show();
     });
+
     $("#gecis-buton-next").click(function () {
         var hizmetNumarasi = document.getElementById("hizmetNumarasi").value;
         if (hizmetNumarasi == "") {
@@ -519,11 +520,10 @@ $(document).ready(function () {
                 title: 'Ooops..',
                 text: 'Lütfen Hizmet Numaranızı Girin!',
             })
-            console.log("Boş alan var." + hizmetNumarasi);
         } else {
-            console.log("Boş alan yok." + hizmetNumarasi);
             $(".firma-gecis-page").hide();
             $(".hiz-ogrenme").show();
+            $(".yeni-tarife-bilgilendirme").hide();
             $(".gecis-tarife-bilgilendirme").show();
         }
     });
@@ -538,9 +538,11 @@ $(document).ready(function () {
         $(".yeni-kurulum-page").hide();
         $(".tarife").show();
     });
+
     $("#yeni-buton-next").click(function () {
         $(".yeni-kurulum-page").hide();
         $(".hiz-ogrenme").show();
+        $(".gecis-tarife-bilgilendirme").hide();
         $(".yeni-tarife-bilgilendirme").show();
     });
     $("#bilgi-gecis-buton-prev").click(function () {
@@ -613,15 +615,31 @@ function changeDesign() {
 // Özet Buton Yönlendirmeleri
 
 $("#adress-duzenle-buton").click(function () {
-    $("#firma-gecis-page").show();
-    $(".hiz-ogrenme").hide();
-    $("#step-kurulum").addClass("form-step-active");
+    var firmaKontrol = document.getElementById("sehir").value;
+    var bireyKontrol = document.getElementById("yk-sehir").value;
 
-    $("#step-ozet").hide();
-    $("#step-ozet").removeClass("form-step-active");
-    formStepsNum = formStepsNum - 2;
-    updateFormSteps();
-    updateProgressBar();
+    if (firmaKontrol == "") {
+        $("#yeni-kurulum-page").show();
+        $(".hiz-ogrenme").hide();
+        $("#step-kurulum").addClass("form-step-active");
+
+        $("#step-ozet").hide();
+        $("#step-ozet").removeClass("form-step-active");
+        formStepsNum = formStepsNum - 2;
+        updateFormSteps();
+        updateProgressBar();
+    }
+    if (bireyKontrol == "") {
+        $("#firma-gecis-page").show();
+        $(".hiz-ogrenme").hide();
+        $("#step-kurulum").addClass("form-step-active");
+
+        $("#step-ozet").hide();
+        $("#step-ozet").removeClass("form-step-active");
+        formStepsNum = formStepsNum - 2;
+        updateFormSteps();
+        updateProgressBar();
+    }
 });
 
 $("#adress-duzenle-buton-mobil").click(function () {
@@ -660,5 +678,5 @@ $("#ozet-paket-buton-mobil").click(function () {
 });
 
 
-//? Validataion İşlemleri
+
 
